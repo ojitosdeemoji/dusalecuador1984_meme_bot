@@ -1,0 +1,53 @@
+name: Recopilar métricas de Bluesky
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: metrics-collector
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    name: Consultar engagement en Bluesky
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ejecutar pruebas unitarias de métricas
+        run: |
+          pytest -v tests/test_metrics.py
+
+      - name: Consultar métricas en Bluesky
+        env:
+          PYTHONPATH: .
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+        run: |
+          python scripts/collect_metrics.py
+
+      - name: Publicar Resumen de Métricas
+        if: always()
+        run: |
+          if [ -f "metrics_summary.md" ]; then
+            cat metrics_summary.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## Error: no se pudo generar el resumen de métricas" >> $GITHUB_STEP_SUMMARY
+          fi
