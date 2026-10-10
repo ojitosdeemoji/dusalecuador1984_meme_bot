@@ -1,7 +1,14 @@
 """Generador de composición meme con datos fixture para validación en CI."""
 
 import io
+import sys
 from pathlib import Path
+
+# Resolver la raíz del proyecto e incorporarla al path de Python
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from PIL import Image, ImageDraw
 
 from src.image_composer import (
