@@ -5,7 +5,6 @@ import asyncio
 from datetime import datetime, timezone
 import io
 import os
-import random
 import sys
 from pathlib import Path
 from typing import List, Tuple
@@ -21,6 +20,7 @@ from src.text_processor import (
     get_available_phrase,
 )
 from src.markov_generator import generate_markov_sentence
+from src.decision_engine import decide_creative_parameters
 from src.image_composer import (
     load_and_sanitize_image,
     render_meme,
@@ -55,6 +55,7 @@ def build_markdown_summary(
     top_text: str,
     bottom_text: str,
     generation_method: str,
+    decision_plan: dict,
     image_metadata: dict,
     image_hash: str,
     dimensions: Tuple[int, int],
@@ -87,23 +88,27 @@ def build_markdown_summary(
 
 **Estado:** {status_line}
 
-### 1. Procedencia de la Imagen
+### 1. Estrategia y Aprendizaje Creativo
+- **Etapa activa:** `{decision_plan.get('phase_name')}`
+- **Modo de decisión:** `{'🎲 Exploración (Variabilidad)' if decision_plan.get('decision_mode') == 'exploration' else '🎯 Explotación (Preferencia por Score)'}`
+- **Técnica textual ejecutada:** `{generation_method}`
+
+### 2. Procedencia de la Imagen
 {source_desc}
 - **Dimensiones finales:** `{dimensions[0]} x {dimensions[1]} px` (Proporción: `{metrics['aspect_ratio']}`)
 - **Luminosidad perceptual:** `{metrics['approx_luminosity']} / 255`
 - **Peso JPEG:** `{file_size_kb:.2f} KB`
 - **Hash SHA-256 de imagen:** `{image_hash[:16]}...`
 
-### 2. Contenido Textual (Cadáver Exquisito)
-- **Método de composición textual:** `{generation_method}`
-- **Frase generada / seleccionada:**
+### 3. Contenido Textual (Cadáver Exquisito)
+- **Frase:**
   > "{phrase}"
 - **Hash SHA-256 de frase:** `{phrase_hash[:16]}...`
 - **Distribución visual:**
   - **Texto superior (Top):** `{top_text if top_text else "(Vacío)"}`
   - **Texto inferior (Bottom):** `{bottom_text if bottom_text else "(Vacío)"}`
 
-### 3. Registro y Persistencia
+### 4. Registro y Persistencia
 {post_section}
 - **Persistencia en state.json:** {"Omitida (Dry Run)" if dry_run else "Registrada atómicamente"}
 """
@@ -131,17 +136,19 @@ async def main_async() -> None:
     state = load_state(state_file)
     used_phrases = state.get("used_phrase_hashes", [])
     used_images = state.get("used_image_hashes", [])
-    print(f"[ESTADO] Frases previamente usadas: {len(used_phrases)} | Imágenes usadas: {len(used_images)}")
+    print(f"[ESTADO] Frases usadas: {len(used_phrases)} | Imágenes usadas: {len(used_images)}")
 
-    # 2. Extracción y generación de frase (Markov o Verbatim)
+    # 2. Consultar motor de decisiones creativas
+    decision_plan = decide_creative_parameters(state)
+    print(f"[APRENDIZAJE] Etapa: {decision_plan['phase_name']} | Modo: {decision_plan['decision_mode']}")
+
+    # 3. Selección y síntesis de frase
     corpus_sentences = extract_phrases_from_pdf(pdf_file)
     selected_phrase = None
     generation_method = "verbatim_extract"
 
-    # Alternar con 50% de probabilidad hacia síntesis de Markov
-    use_markov = random.random() < 0.5
-    if use_markov:
-        print("[TEXTO] Intentando generación mediante Cadenas de Markov...")
+    if decision_plan["use_markov"]:
+        print("[TEXTO] Motor de decisión seleccionó: Cadenas de Markov.")
         markov_candidate = generate_markov_sentence(
             sentences=corpus_sentences,
             used_hashes=used_phrases,
@@ -152,13 +159,11 @@ async def main_async() -> None:
         if markov_candidate:
             selected_phrase = markov_candidate
             generation_method = "markov_chain"
-            print(f"[TEXTO] Aforismo Markov sintetizado exitosamente.")
 
-    # Si Markov no converge o se seleccionó verbatim
     if not selected_phrase:
+        print("[TEXTO] Empleando extracción literal del corpus PDF.")
         selected_phrase = get_available_phrase(corpus_sentences, used_phrases)
         generation_method = "verbatim_extract"
-        print(f"[TEXTO] Seleccionada frase literal del corpus.")
 
     if not selected_phrase:
         print("ERROR CRÍTICO: No hay frases disponibles en el corpus.")
@@ -167,7 +172,7 @@ async def main_async() -> None:
     phrase_hash = compute_hash(selected_phrase)
     print(f"[TEXTO] Frase ({generation_method}): \"{selected_phrase}\" (Hash: {phrase_hash[:12]}...)")
 
-    # 3. Inicializar pool de X si existen credenciales
+    # 4. Inicializar pool de X si existen credenciales
     x_user = os.getenv("X_USERNAME")
     x_token = os.getenv("X_AUTH_TOKEN")
     x_ct0 = os.getenv("X_CT0")
@@ -179,17 +184,13 @@ async def main_async() -> None:
             pool = await initialize_x_pool(db_path, x_user, x_token, x_ct0)
             is_active = await verify_x_account_status(pool, x_user)
             if not is_active:
-                print("[X] Sesión no activa en X. Conmutando a reserva local.")
                 pool = None
-        except Exception as exc:
-            print(f"[X] Excepción en pool: {exc}. Conmutando a reserva local.")
+        except Exception:
             pool = None
-    else:
-        print("[X] Credenciales no disponibles. Conmutando a reserva local.")
 
     active_users = get_active_usernames(allowlist_file) if allowlist_file.exists() else []
 
-    # 4. Adquirir imagen (X con fallback local)
+    # 5. Adquirir imagen (X con fallback local)
     raw_img_bytes, img_hash, img_metadata = await acquire_image_with_fallback(
         pool=pool,
         active_usernames=active_users,
@@ -198,7 +199,7 @@ async def main_async() -> None:
     )
     print(f"[IMAGEN] Fuente seleccionada: {img_metadata['source_type']} (Hash: {img_hash[:12]}...)")
 
-    # 5. Renderizado con Pillow
+    # 6. Renderizado con Pillow
     sanitized_image = load_and_sanitize_image(io.BytesIO(raw_img_bytes))
     top_text, bottom_text = split_phrase_into_meme_layout(selected_phrase)
 
@@ -217,10 +218,10 @@ async def main_async() -> None:
 
     post_info = None
 
-    # 6. Publicación si no es dry-run
+    # 7. Publicación si no es dry-run
     if not args.dry_run:
         print("[PUBLICACIÓN] Publicando en Bluesky...")
-        post_caption = f"{selected_phrase}\n\n#cadáverexquisito #bot #markov"
+        post_caption = f"{selected_phrase}\n\n#cadáverexquisito #bot"
         alt_description = f"Meme de cadáver exquisito digital: '{selected_phrase}'"
 
         try:
@@ -236,7 +237,7 @@ async def main_async() -> None:
             print(f"ERROR CRÍTICO AL PUBLICAR: {exc}")
             sys.exit(1)
 
-        # 7. Persistir en el estado con identificador de Markov
+        # 8. Persistir en el estado con modo de aprendizaje
         text_pos = "top_and_bottom" if (top_text and bottom_text) else ("top_only" if top_text else "bottom_only")
         lines_count = (1 if top_text else 0) + (1 if bottom_text else 0)
         now_iso = datetime.now(timezone.utc).isoformat()
@@ -252,6 +253,8 @@ async def main_async() -> None:
             "source_tweet_url": img_metadata.get("source_tweet_url", ""),
             "source_tweet_id": img_metadata.get("source_tweet_id", ""),
             "fallback_activated": img_metadata.get("fallback_activated", False),
+            "decision_mode": decision_plan["decision_mode"],
+            "learning_phase": decision_plan["phase_name"],
             "generation_method": generation_method,
             "is_markov": (generation_method == "markov_chain"),
             "phrase_text": selected_phrase,
@@ -272,7 +275,7 @@ async def main_async() -> None:
     else:
         print("[DRY RUN] Simulación completada con éxito. No se registraron cambios en state.json.")
 
-    # 8. Reporte Markdown
+    # 9. Reporte Markdown
     summary_content = build_markdown_summary(
         dry_run=args.dry_run,
         phrase=selected_phrase,
@@ -280,6 +283,7 @@ async def main_async() -> None:
         top_text=top_text,
         bottom_text=bottom_text,
         generation_method=generation_method,
+        decision_plan=decision_plan,
         image_metadata=img_metadata,
         image_hash=img_hash,
         dimensions=(w, h),
