@@ -1,6 +1,9 @@
 name: Recopilar métricas de Bluesky
 
 on:
+  schedule:
+    # Sincronización automática una vez al día a las 05:00 UTC (horario valle)
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -8,13 +11,13 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   collect:
-    name: Consultar engagement en Bluesky
+    name: Consultar y persistir engagement en Bluesky
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: Descargar repositorio
@@ -31,17 +34,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Ejecutar pruebas unitarias de métricas
+      - name: Ejecutar pruebas unitarias de persistencia de métricas
         run: |
-          pytest -v tests/test_metrics.py
+          pytest -v tests/test_metrics.py tests/test_metrics_persistence.py
 
-      - name: Consultar métricas en Bluesky
+      - name: Consultar y guardar métricas en el estado
         env:
           PYTHONPATH: .
           BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
         run: |
           python scripts/collect_metrics.py
+
+      - name: Guardar estado actualizado en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state.json
+          git diff --staged --quiet || (git commit -m "bot: sincronizar métricas en state.json [skip ci]" && git push)
 
       - name: Publicar Resumen de Métricas
         if: always()
