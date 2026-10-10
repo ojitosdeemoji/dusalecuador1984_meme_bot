@@ -11,6 +11,11 @@ if str(ROOT_DIR) not in sys.path:
 
 from src.state_manager import load_state, save_state, update_published_metrics
 from src.metrics_collector import fetch_posts_metrics, calculate_age_hours
+from src.scoring import (
+    calculate_raw_score,
+    calculate_normalized_score,
+    get_learning_phase,
+)
 
 
 def main() -> None:
@@ -28,7 +33,6 @@ def main() -> None:
         print("AVISO: No hay publicaciones registradas en state.json.")
         sys.exit(0)
 
-    # Filtrar entradas que posean URI válida
     uris = [entry["uri"] for entry in published if entry.get("uri")]
     print(f"[MÉTRICAS] Publicaciones encontradas: {len(published)} (Con URI: {len(uris)})")
 
@@ -44,48 +48,61 @@ def main() -> None:
 
     print(f"[MÉTRICAS] Métricas recuperadas exitosamente para {len(metrics_by_uri)} publicaciones.")
 
-    # 1. Persistir métricas en data/state.json
+    # 1. Actualizar métricas crudas en el estado
     now_iso = datetime.now(timezone.utc).isoformat()
-    updated_count = update_published_metrics(state, metrics_by_uri, now_iso)
-    save_state(state_path, state)
-    print(f"[MÉTRICAS] Persistencia completada: {updated_count} entradas actualizadas en {state_path.name}.")
+    update_published_metrics(state, metrics_by_uri, now_iso)
 
-    # 2. Construir informe Markdown para GitHub Actions
+    # 2. Calcular y asignar el score normalizado a cada publicación
+    for entry in published:
+        likes = entry.get("likes", 0)
+        reposts = entry.get("reposts", 0)
+        replies = entry.get("replies", 0)
+        quotes = entry.get("quotes", 0)
+        age = calculate_age_hours(entry.get("published_at", ""))
+
+        raw_score = calculate_raw_score(likes, reposts, replies, quotes)
+        norm_score = calculate_normalized_score(raw_score, age)
+        entry["score"] = norm_score
+
+    # 3. Guardar estado con scores persistidos
+    save_state(state_path, state)
+    print(f"[MÉTRICAS] Scores calculados y guardados en {state_path.name}.")
+
+    phase_name, phase_desc = get_learning_phase(len(published))
+
+    # 4. Construir informe Markdown para GitHub Actions
     summary_path = ROOT_DIR / "metrics_summary.md"
     rows = []
 
-    print("\n--- RESUMEN ACTUALIZADO DE ENGAGEMENT (PERSISTIDO) ---")
+    print("\n--- RESUMEN ACTUALIZADO DE ENGAGEMENT Y SCORE ---")
     for idx, entry in enumerate(published, start=1):
-        uri = entry.get("uri", "")
-        post_metrics = metrics_by_uri.get(uri, {"likes": 0, "reposts": 0, "replies": 0, "quotes": 0})
         age_hours = calculate_age_hours(entry.get("published_at", ""))
         url = entry.get("post_url", "(Sin URL)")
         phrase = entry.get("phrase_text", "Texto no registrado")
-        short_phrase = phrase[:35] + ("..." if len(phrase) > 35 else "")
+        short_phrase = phrase[:30] + ("..." if len(phrase) > 30 else "")
 
-        likes = post_metrics["likes"]
-        reposts = post_metrics["reposts"]
-        replies = post_metrics["replies"]
-        quotes = post_metrics["quotes"]
+        likes = entry.get("likes", 0)
+        reposts = entry.get("reposts", 0)
+        replies = entry.get("replies", 0)
+        quotes = entry.get("quotes", 0)
+        score = entry.get("score", 0.0)
 
-        print(f"Post #{idx} | Antigüedad: {age_hours:.1f}h | Likes: {likes} | Reposts: {reposts} | Respuestas: {replies} | Citas: {quotes}")
-        print(f"  Frase: \"{short_phrase}\"")
-        print(f"  URL: {url}")
-
+        print(f"Post #{idx} | Score: {score:.3f} | Antigüedad: {age_hours:.1f}h | Likes: {likes} | Reposts: {reposts} | Respuestas: {replies}")
         rows.append(
-            f"| #{idx} | [{short_phrase}]({url}) | {age_hours:.1f}h | {likes} | {reposts} | {replies} | {quotes} |"
+            f"| #{idx} | [{short_phrase}]({url}) | {age_hours:.1f}h | {likes} | {reposts} | {replies} | {quotes} | **{score:.3f}** |"
         )
-    print("------------------------------------------------------\n")
+    print("--------------------------------------------------\n")
 
-    markdown_content = f"""## Reporte de Métricas Persistidas en el Estado
+    markdown_content = f"""## Reporte de Métricas y Scoring de Obras
 
-- **Total de publicaciones consultadas:** {len(published)}
-- **Entradas actualizadas en state.json:** {updated_count}
+- **Total de publicaciones:** {len(published)}
+- **Fase de Aprendizaje Artístico:** `{phase_name}`
+  > *{phase_desc}*
+- **Fórmula de ponderación:** `Likes + (2 × Reposts) + (3 × Respuestas) + (2 × Citas)` corregido por `√(horas / 12)`
 - **Última sincronización:** `{now_iso}`
-- **Protocolo:** AT Protocol (\`app.bsky.feed.getPosts\`)
 
-| # | Publicación | Antigüedad | Likes | Reposts | Respuestas | Citas |
-|---|---|---|---|---|---|---|
+| # | Publicación | Antigüedad | Likes | Reposts | Respuestas | Citas | Score Normalizado |
+|---|---|---|---|---|---|---|---|
 """ + "\n".join(rows) + "\n"
 
     summary_path.write_text(markdown_content, encoding="utf-8")
