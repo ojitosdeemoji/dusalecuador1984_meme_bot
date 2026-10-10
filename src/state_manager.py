@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 
 DEFAULT_STATE: Dict[str, Any] = {
     "version": 1,
+    "last_metrics_refresh": None,
     "published": [],
     "used_phrase_hashes": [],
     "used_image_hashes": [],
@@ -30,6 +31,8 @@ def load_state(state_path: Path) -> Dict[str, Any]:
             for key in ["published", "used_phrase_hashes", "used_image_hashes"]:
                 if key not in data or not isinstance(data[key], list):
                     data[key] = []
+            if "last_metrics_refresh" not in data:
+                data["last_metrics_refresh"] = None
             return data
     except (json.JSONDecodeError, OSError):
         return DEFAULT_STATE.copy()
@@ -71,3 +74,28 @@ def record_entry(
         **metadata,
     }
     state_data["published"].append(entry)
+
+
+def update_published_metrics(
+    state_data: Dict[str, Any],
+    metrics_by_uri: Dict[str, Dict[str, int]],
+    timestamp_iso: str,
+) -> int:
+    """Actualiza las métricas de engagement de las obras que coincidan con las URIs consultadas.
+
+    Devuelve la cantidad de publicaciones efectivamente actualizadas.
+    """
+    updated_count = 0
+    for entry in state_data.get("published", []):
+        uri = entry.get("uri")
+        if uri and uri in metrics_by_uri:
+            counts = metrics_by_uri[uri]
+            entry["likes"] = int(counts.get("likes", 0))
+            entry["reposts"] = int(counts.get("reposts", 0))
+            entry["replies"] = int(counts.get("replies", 0))
+            entry["quotes"] = int(counts.get("quotes", 0))
+            entry["metrics_updated_at"] = timestamp_iso
+            updated_count += 1
+
+    state_data["last_metrics_refresh"] = timestamp_iso
+    return updated_count
