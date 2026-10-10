@@ -3,7 +3,10 @@
 import asyncio
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+import httpx
 from twscrape import AccountsPool, API
+
+MAX_DOWNLOAD_BYTES = 10 * 1024 * 1024  # 10 MB máximo
 
 
 async def initialize_x_pool(
@@ -48,29 +51,21 @@ async def get_user_timeline_image_candidates(
     target_username: str,
     limit: int = 10,
 ) -> List[Dict[str, Any]]:
-    """Obtiene tweets recientes con imágenes directamente desde el muro de un usuario.
-
-    Utiliza UserTweets en lugar de SearchTimeline para evitar bloqueos por 404.
-    """
+    """Obtiene tweets recientes con imágenes directamente desde el muro de un usuario."""
     clean_target = target_username.strip().lstrip("@")
     api = API(pool)
     candidates: List[Dict[str, Any]] = []
 
     try:
-        # 1. Obtener datos y user_id del perfil
         user_info = await api.user_by_login(clean_target)
         if not user_info or not hasattr(user_info, "id"):
             print(f"[X_SCRAPER] No se pudo resolver el perfil para @{clean_target}.")
             return []
 
         user_id = user_info.id
-        print(f"[X_SCRAPER] Perfil @{clean_target} resuelto con ID: {user_id}. Consultando publicaciones recientes...")
+        print(f"[X_SCRAPER] Perfil @{clean_target} resuelto con ID: {user_id}. Consultando publicaciones...")
 
-        # 2. Consultar tweets directos del perfil
-        count = 0
         async for tweet in api.user_tweets(user_id, limit=limit):
-            count += 1
-            # Filtrar si contiene imágenes
             if tweet.media and hasattr(tweet.media, "photos") and tweet.media.photos:
                 for photo in tweet.media.photos:
                     photo_url = getattr(photo, "url", None)
@@ -87,3 +82,21 @@ async def get_user_timeline_image_candidates(
         print(f"[X_SCRAPER] Advertencia al consultar muro de @{clean_target}: {exc}")
 
     return candidates
+
+
+async def download_image_bytes(image_url: str, timeout_seconds: float = 15.0) -> bytes:
+    """Descarga los bytes binarios de una imagen por HTTPS de forma segura."""
+    async with httpx.AsyncClient(timeout=timeout_seconds, follow_redirects=True) as client:
+        response = await client.get(image_url)
+        if response.status_code != 200:
+            raise ValueError(f"Fallo al descargar imagen: HTTP {response.status_code}")
+
+        content_type = response.headers.get("content-type", "").lower()
+        if not any(t in content_type for t in ["image/", "application/octet-stream"]):
+            raise ValueError(f"Encabezado content-type no corresponde a una imagen: {content_type}")
+
+        data = response.content
+        if len(data) > MAX_DOWNLOAD_BYTES:
+            raise ValueError(f"Imagen demasiado pesada: {len(data)} bytes (máx {MAX_DOWNLOAD_BYTES})")
+
+        return data
