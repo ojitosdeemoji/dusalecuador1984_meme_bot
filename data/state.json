@@ -1,6 +1,33 @@
 {
   "version": 1,
-  "published": [],
-  "used_phrase_hashes": [],
-  "used_image_hashes": []
+  "published": [
+    {
+      "phrase_hash": "38b6bef40b4ac3287481777c0fc3e20252db8e066dbe7b06200e6dbd5b99f425",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxjjeyh6vc25",
+      "cid": "bafyreicw44vcu5gzx4dfpevkyiqoqitvuljt33xon3rcx5jvp5fb4b6sym",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxjjeyh6vc25",
+      "published_at": "2026-10-10T12:45:11.726210+00:00",
+      "source_type": "local_image",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_license": "autorizada_local",
+      "phrase_text": "El vestíbulo olía a legumbres cocidas y a esteras viejas.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
+    }
+  ],
+  "used_phrase_hashes": [
+    "38b6bef40b4ac3287481777c0fc3e20252db8e066dbe7b06200e6dbd5b99f425"
+  ],
+  "used_image_hashes": [
+    "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3"
+  ]
 }
