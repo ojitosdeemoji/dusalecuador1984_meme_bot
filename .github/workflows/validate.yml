@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validar sintaxis, pruebas, fixture y PDF
+    name: Validar sintaxis, pruebas, fixture, PDF e imágenes
     runs-on: ubuntu-latest
 
     steps:
@@ -55,6 +55,12 @@ jobs:
         run: |
           python scripts/validate_pdf.py
 
+      - name: Validar catálogo de imágenes locales
+        env:
+          PYTHONPATH: .
+        run: |
+          python scripts/validate_local_images.py
+
       - name: Subir artifact de previsualización
         uses: actions/upload-artifact@v4
         with:
@@ -70,5 +76,6 @@ jobs:
           echo "- **Pruebas unitarias:** Todos los tests en \`tests/\` pasaron con éxito." >> $GITHUB_STEP_SUMMARY
           echo "- **Generación de meme fixture:** \`out.jpg\` producido y disponible en artefactos." >> $GITHUB_STEP_SUMMARY
           echo "- **Corpus textual:** \`data/corpus.pdf\` verificado y analizado correctamente." >> $GITHUB_STEP_SUMMARY
+          echo "- **Catálogo de imágenes locales:** Imágenes de respaldo analizadas y listas." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Tanto el motor gráfico como el corpus textual están listos para la composición real." >> $GITHUB_STEP_SUMMARY
+          echo "Todos los insumos reales (texto e imágenes) están validados para la primera prueba seca (dry-run)." >> $GITHUB_STEP_SUMMARY
