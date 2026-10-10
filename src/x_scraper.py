@@ -43,25 +43,34 @@ async def verify_x_account_status(pool: AccountsPool, username: str) -> bool:
     return bool(account.active)
 
 
-async def search_user_image_candidates(
+async def get_user_timeline_image_candidates(
     pool: AccountsPool,
     target_username: str,
-    limit: int = 5,
+    limit: int = 10,
 ) -> List[Dict[str, Any]]:
-    """Busca tweets recientes con fotos para un usuario específico de la allowlist.
+    """Obtiene tweets recientes con imágenes directamente desde el muro de un usuario.
 
-    Devuelve metadatos de las imágenes encontradas sin descargar su contenido binario.
+    Utiliza UserTweets en lugar de SearchTimeline para evitar bloqueos por 404.
     """
     clean_target = target_username.strip().lstrip("@")
     api = API(pool)
-
-    # Consulta estricta: tweets de la cuenta con fotos, omitiendo retweets y respuestas
-    query = f"from:{clean_target} -filter:retweets filter:media"
     candidates: List[Dict[str, Any]] = []
 
     try:
-        async for tweet in api.search(query, limit=limit):
-            # Comprobar presencia de fotos
+        # 1. Obtener datos y user_id del perfil
+        user_info = await api.user_by_login(clean_target)
+        if not user_info or not hasattr(user_info, "id"):
+            print(f"[X_SCRAPER] No se pudo resolver el perfil para @{clean_target}.")
+            return []
+
+        user_id = user_info.id
+        print(f"[X_SCRAPER] Perfil @{clean_target} resuelto con ID: {user_id}. Consultando publicaciones recientes...")
+
+        # 2. Consultar tweets directos del perfil
+        count = 0
+        async for tweet in api.user_tweets(user_id, limit=limit):
+            count += 1
+            # Filtrar si contiene imágenes
             if tweet.media and hasattr(tweet.media, "photos") and tweet.media.photos:
                 for photo in tweet.media.photos:
                     photo_url = getattr(photo, "url", None)
@@ -75,6 +84,6 @@ async def search_user_image_candidates(
                             "tweet_text": (tweet.rawContent or "").strip().replace("\n", " "),
                         })
     except Exception as exc:
-        print(f"[X_SCRAPER] Advertencia durante búsqueda para @{clean_target}: {exc}")
+        print(f"[X_SCRAPER] Advertencia al consultar muro de @{clean_target}: {exc}")
 
     return candidates
