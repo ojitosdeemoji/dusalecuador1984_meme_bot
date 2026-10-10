@@ -40,12 +40,22 @@ jobs:
       - name: Ejecutar motor del bot
         env:
           PYTHONPATH: .
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             python scripts/run_bot.py --dry-run
           else
             python scripts/run_bot.py
           fi
+
+      - name: Guardar estado actualizado en el repositorio
+        if: ${{ inputs.dry_run == false }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state.json
+          git diff --staged --quiet || (git commit -m "bot: registrar publicación en state.json [skip ci]" && git push)
 
       - name: Subir artefacto de previsualización de meme
         uses: actions/upload-artifact@v4
