@@ -1,7 +1,10 @@
 """Orquestador principal de ejecución del bot (simulación y publicación)."""
 
 import argparse
+import asyncio
 from datetime import datetime, timezone
+import io
+import os
 import sys
 from pathlib import Path
 from typing import List, Tuple
@@ -25,8 +28,9 @@ from src.image_composer import (
     analyze_image_metrics,
 )
 from src.publisher import publish_meme_to_bluesky
-
-VALID_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+from src.x_config import get_active_usernames
+from src.x_scraper import initialize_x_pool, verify_x_account_status
+from src.image_source import acquire_image_with_fallback
 
 
 def split_phrase_into_meme_layout(phrase: str) -> Tuple[str, str]:
@@ -43,39 +47,13 @@ def split_phrase_into_meme_layout(phrase: str) -> Tuple[str, str]:
     return top_part, bottom_part
 
 
-def select_local_image(images_dir: Path, used_hashes: List[str]) -> Tuple[Path, bytes, str]:
-    """Selecciona la primera imagen disponible cuyo hash no haya sido registrado."""
-    image_files = sorted([
-        f for f in images_dir.iterdir()
-        if f.is_file() and f.suffix.lower() in VALID_EXTENSIONS
-    ])
-
-    if not image_files:
-        raise FileNotFoundError(f"No hay imágenes válidas en el directorio: {images_dir}")
-
-    used_set = set(used_hashes)
-
-    for img_path in image_files:
-        content = img_path.read_bytes()
-        img_hash = compute_image_hash(content)
-        if img_hash not in used_set:
-            return img_path, content, img_hash
-
-    # Si se usaron todas, reciclar la primera
-    first_path = image_files[0]
-    first_content = first_path.read_bytes()
-    first_hash = compute_image_hash(first_content)
-    print("[AVISO] Todas las imágenes locales han sido utilizadas al menos una vez. Reutilizando la primera.")
-    return first_path, first_content, first_hash
-
-
 def build_markdown_summary(
     dry_run: bool,
     phrase: str,
     phrase_hash: str,
     top_text: str,
     bottom_text: str,
-    image_name: str,
+    image_metadata: dict,
     image_hash: str,
     dimensions: Tuple[int, int],
     file_size_kb: float,
@@ -85,39 +63,50 @@ def build_markdown_summary(
     """Construye el reporte estructurado en formato Markdown para GitHub Step Summary."""
     if dry_run:
         status_line = "🟡 **MODO SIMULACIÓN (DRY RUN - SIN PUBLICAR)**"
-        post_section = "- **Publicación:** Omitida deliberadamente por el modo simulación."
+        post_section = "- **Publicación en Bluesky:** Omitida deliberadamente por modo simulación."
     else:
         status_line = "🟢 **PUBLICACIÓN CONFIRMADA EN BLUESKY**"
         post_section = f"""- **URL Pública:** [{post_info['post_url']}]({post_info['post_url']})
 - **URI AT-Protocol:** `{post_info['uri']}`
 - **CID del post:** `{post_info['cid']}`"""
 
+    if image_metadata.get("source_type") == "x_twitter":
+        source_desc = f"""- **Fuente:** X/Twitter (Cuenta autorizada)
+- **Autor de origen:** `@{image_metadata.get('source_author')}`
+- **Tweet de origen:** [{image_metadata.get('source_tweet_url')}]({image_metadata.get('source_tweet_url')})
+- **Fallback activado:** `No`"""
+    else:
+        source_desc = f"""- **Fuente:** Catálogo Local de Reserva
+- **Archivo:** `{image_metadata.get('source_file')}`
+- **Fallback activado:** `Sí`
+- **Motivo:** `{image_metadata.get('fallback_reason', 'N/A')}`"""
+
     return f"""## Reporte de Ejecución: meme-bot
 
 **Estado:** {status_line}
 
-### 1. Composición Visual
-- **Imagen base:** `{image_name}`
+### 1. Procedencia de la Imagen
+{source_desc}
 - **Dimensiones finales:** `{dimensions[0]} x {dimensions[1]} px` (Proporción: `{metrics['aspect_ratio']}`)
 - **Luminosidad perceptual:** `{metrics['approx_luminosity']} / 255`
-- **Peso de salida (JPEG):** `{file_size_kb:.2f} KB`
+- **Peso JPEG:** `{file_size_kb:.2f} KB`
 - **Hash SHA-256 de imagen:** `{image_hash[:16]}...`
 
 ### 2. Contenido Textual (Cadáver Exquisito)
-- **Frase original extraída:**
+- **Frase original extraída del PDF:**
   > "{phrase}"
 - **Hash SHA-256 de frase:** `{phrase_hash[:16]}...`
-- **Distribución:**
-  - **Texto superior:** `{top_text if top_text else "(Vacío)"}`
-  - **Texto inferior:** `{bottom_text if bottom_text else "(Vacío)"}`
+- **Distribución visual:**
+  - **Texto superior (Top):** `{top_text if top_text else "(Vacío)"}`
+  - **Texto inferior (Bottom):** `{bottom_text if bottom_text else "(Vacío)"}`
 
-### 3. Registro y Publicación
+### 3. Registro y Persistencia
 {post_section}
 - **Persistencia en state.json:** {"Omitida (Dry Run)" if dry_run else "Registrada atómicamente"}
 """
 
 
-def main() -> None:
+async def main_async() -> None:
     parser = argparse.ArgumentParser(description="Orquestador de meme-bot.")
     parser.add_argument(
         "--dry-run",
@@ -128,9 +117,11 @@ def main() -> None:
 
     print(f"[BOT] Iniciando ciclo de ejecución. Modo Dry Run: {args.dry_run}")
 
+    # Rutas clave
     state_file = ROOT_DIR / "data" / "state.json"
     pdf_file = ROOT_DIR / "data" / "corpus.pdf"
-    images_dir = ROOT_DIR / "data" / "images"
+    local_images_dir = ROOT_DIR / "data" / "images"
+    allowlist_file = ROOT_DIR / "data" / "x_allowlist.json"
     output_image_path = ROOT_DIR / "output_meme.jpg"
     summary_path = ROOT_DIR / "summary.md"
 
@@ -138,9 +129,9 @@ def main() -> None:
     state = load_state(state_file)
     used_phrases = state.get("used_phrase_hashes", [])
     used_images = state.get("used_image_hashes", [])
-    print(f"[ESTADO] Frases previas: {len(used_phrases)} | Imágenes previas: {len(used_images)}")
+    print(f"[ESTADO] Frases previamente usadas: {len(used_phrases)} | Imágenes usadas: {len(used_images)}")
 
-    # 2. Selección de frase
+    # 2. Extraer frases y seleccionar candidata
     phrases = extract_phrases_from_pdf(pdf_file)
     selected_phrase = get_available_phrase(phrases, used_phrases)
 
@@ -151,12 +142,39 @@ def main() -> None:
     phrase_hash = compute_hash(selected_phrase)
     print(f"[TEXTO] Frase seleccionada: \"{selected_phrase}\" (Hash: {phrase_hash[:12]}...)")
 
-    # 3. Selección de imagen
-    img_path, img_bytes, img_hash = select_local_image(images_dir, used_images)
-    print(f"[IMAGEN] Imagen seleccionada: {img_path.name} (Hash: {img_hash[:12]}...)")
+    # 3. Inicializar pool de X si existen credenciales
+    x_user = os.getenv("X_USERNAME")
+    x_token = os.getenv("X_AUTH_TOKEN")
+    x_ct0 = os.getenv("X_CT0")
 
-    # 4. Renderizado gráfico
-    sanitized_image = load_and_sanitize_image(img_path)
+    pool = None
+    if x_user and x_token and x_ct0:
+        db_path = ROOT_DIR / "accounts.db"
+        try:
+            pool = await initialize_x_pool(db_path, x_user, x_token, x_ct0)
+            is_active = await verify_x_account_status(pool, x_user)
+            if not is_active:
+                print("[X] Sesión no activa en X. Se utilizará contingencia local.")
+                pool = None
+        except Exception as exc:
+            print(f"[X] Excepción al inicializar pool de X: {exc}. Se utilizará contingencia.")
+            pool = None
+    else:
+        print("[X] Credenciales de X no detectadas. Se utilizará contingencia local.")
+
+    active_users = get_active_usernames(allowlist_file) if allowlist_file.exists() else []
+
+    # 4. Adquirir imagen (X con fallback a imágenes locales)
+    raw_img_bytes, img_hash, img_metadata = await acquire_image_with_fallback(
+        pool=pool,
+        active_usernames=active_users,
+        used_hashes=used_images,
+        local_images_dir=local_images_dir,
+    )
+    print(f"[IMAGEN] Fuente seleccionada: {img_metadata['source_type']} (Hash: {img_hash[:12]}...)")
+
+    # 5. Procesamiento gráfico con Pillow
+    sanitized_image = load_and_sanitize_image(io.BytesIO(raw_img_bytes))
     top_text, bottom_text = split_phrase_into_meme_layout(selected_phrase)
 
     meme_canvas = render_meme(
@@ -169,13 +187,12 @@ def main() -> None:
     file_size_kb = len(jpeg_bytes) / 1024
     output_image_path.write_bytes(jpeg_bytes)
 
-    # 5. Métricas visuales
     metrics = analyze_image_metrics(sanitized_image)
     w, h = meme_canvas.size
 
     post_info = None
 
-    # 6. Publicación si no es dry-run
+    # 6. Publicación si NO es dry-run
     if not args.dry_run:
         print("[PUBLICACIÓN] Publicando en Bluesky...")
         post_caption = f"{selected_phrase}\n\n#cadáverexquisito #bot"
@@ -204,10 +221,12 @@ def main() -> None:
             "cid": post_info["cid"],
             "post_url": post_info["post_url"],
             "published_at": now_iso,
-            "source_type": "local_image",
-            "source_file": img_path.name,
-            "source_author": "archivo_local",
-            "source_license": "autorizada_local",
+            "source_type": img_metadata.get("source_type", "desconocido"),
+            "source_file": img_metadata.get("source_file", ""),
+            "source_author": img_metadata.get("source_author", ""),
+            "source_tweet_url": img_metadata.get("source_tweet_url", ""),
+            "source_tweet_id": img_metadata.get("source_tweet_id", ""),
+            "fallback_activated": img_metadata.get("fallback_activated", False),
             "phrase_text": selected_phrase,
             "lines_count": lines_count,
             "text_position": text_pos,
@@ -223,6 +242,8 @@ def main() -> None:
         record_entry(state, phrase_hash, img_hash, entry_metadata)
         save_state(state_file, state)
         print(f"[ESTADO] Estado actualizado y guardado en {state_file.name}.")
+    else:
+        print("[DRY RUN] Simulación completada con éxito. No se registraron cambios en state.json.")
 
     # 8. Reporte Markdown
     summary_content = build_markdown_summary(
@@ -231,7 +252,7 @@ def main() -> None:
         phrase_hash=phrase_hash,
         top_text=top_text,
         bottom_text=bottom_text,
-        image_name=img_path.name,
+        image_metadata=img_metadata,
         image_hash=img_hash,
         dimensions=(w, h),
         file_size_kb=file_size_kb,
@@ -239,6 +260,10 @@ def main() -> None:
         post_info=post_info,
     )
     summary_path.write_text(summary_content, encoding="utf-8")
+
+
+def main() -> None:
+    asyncio.run(main_async())
 
 
 if __name__ == "__main__":
