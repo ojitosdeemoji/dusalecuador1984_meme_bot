@@ -35,6 +35,8 @@ jobs:
           pytest -v tests/
 
       - name: Generar meme con fixture
+        env:
+          PYTHONPATH: .
         run: |
           python scripts/generate_fixture_meme.py
 
