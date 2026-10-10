@@ -44,14 +44,40 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "63d418b5814e6af53a30e868eb0869ec8aaac9e2bfc35519f28ef7b3b832cb4d",
+      "image_hash": "411fac4684863a290a216e8633456c0f88569bbda6b9565f5f6b27370c61a688",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxjqkkjjie25",
+      "cid": "bafyreig5nwwqht5kjo34557slclxrf4gzvmvuiaw37ja2tic34giudrn44",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxjqkkjjie25",
+      "published_at": "2026-10-10T14:53:34.664062+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HRtECZ9a4AA8FQU.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2097344869391814900",
+      "source_tweet_id": "2097344869391814900",
+      "fallback_activated": false,
+      "phrase_text": "Winston se dirigi ó hacia las escaleras.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.08,
+      "approx_luminosity": 115.16,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
     "38b6bef40b4ac3287481777c0fc3e20252db8e066dbe7b06200e6dbd5b99f425",
-    "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2"
+    "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2",
+    "63d418b5814e6af53a30e868eb0869ec8aaac9e2bfc35519f28ef7b3b832cb4d"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
-    "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284"
+    "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284",
+    "411fac4684863a290a216e8633456c0f88569bbda6b9565f5f6b27370c61a688"
   ]
 }
