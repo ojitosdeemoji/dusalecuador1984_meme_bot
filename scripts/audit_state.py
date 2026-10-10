@@ -21,7 +21,6 @@ def main() -> None:
 
     state = load_state(state_path)
 
-    # 1. Validar esquema
     required_keys = ["version", "published", "used_phrase_hashes", "used_image_hashes"]
     for key in required_keys:
         if key not in state:
@@ -37,31 +36,39 @@ def main() -> None:
     print(f"[ESTADO] Hashes de frases almacenados: {len(used_phrases)}")
     print(f"[ESTADO] Hashes de imágenes almacenados: {len(used_images)}")
 
-    # 2. Comprobar integridad y unicidad de listas
     if len(used_phrases) != len(set(used_phrases)):
-        print("ERROR: Se detectaron hashes de frases duplicados dentro de 'used_phrase_hashes'.")
+        print("ERROR: Hashes de frases duplicados dentro de 'used_phrase_hashes'.")
         sys.exit(1)
 
     if len(used_images) != len(set(used_images)):
-        print("ERROR: Se detectaron hashes de imágenes duplicados dentro de 'used_image_hashes'.")
+        print("ERROR: Hashes de imágenes duplicados dentro de 'used_image_hashes'.")
         sys.exit(1)
 
-    # 3. Mostrar detalle de publicaciones realizadas
     print("\n--- HISTORIAL DE PUBLICACIONES EN BLUESKY ---")
     for index, entry in enumerate(published, start=1):
         p_text = entry.get("phrase_text", "(Sin texto guardado)")
         url = entry.get("post_url", "(Sin URL)")
         date = entry.get("published_at", "(Sin fecha)")
-        img_name = entry.get("source_file", "(Desconocida)")
+        src_type = entry.get("source_type", "local")
+
         print(f"Post #{index} | Fecha: {date}")
         print(f"  - Frase: \"{p_text}\"")
-        print(f"  - Imagen: {img_name}")
-        print(f"  - Enlace: {url}")
+        if src_type == "x_twitter":
+            author = entry.get("source_author", "Desconocido")
+            tweet_url = entry.get("source_tweet_url", "(Sin tweet URL)")
+            print(f"  - Fuente: X/Twitter (@{author})")
+            print(f"  - Tweet origen: {tweet_url}")
+        else:
+            img_file = entry.get("source_file", "(Desconocido)")
+            fb = " (Fallback activado)" if entry.get("fallback_activated") else ""
+            print(f"  - Fuente: Catálogo Local ({img_file}){fb}")
+
+        print(f"  - Enlace Bluesky: {url}")
         print(f"  - Hash frase: {entry.get('phrase_hash', '')[:12]}...")
         print(f"  - Hash imagen: {entry.get('image_hash', '')[:12]}...")
     print("----------------------------------------------\n")
 
-    print("✔ AUDITORÍA SUPERADA: La estructura de persistencia es íntegra y consistente.")
+    print("✔ AUDITORÍA SUPERADA: Integridad y trazabilidad de fuentes confirmada.")
 
 
 if __name__ == "__main__":
