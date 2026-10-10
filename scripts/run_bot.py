@@ -5,11 +5,11 @@ import asyncio
 from datetime import datetime, timezone
 import io
 import os
+import random
 import sys
 from pathlib import Path
 from typing import List, Tuple
 
-# Inyectar raíz del proyecto en sys.path
 ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
@@ -20,6 +20,7 @@ from src.text_processor import (
     compute_hash,
     get_available_phrase,
 )
+from src.markov_generator import generate_markov_sentence
 from src.image_composer import (
     load_and_sanitize_image,
     render_meme,
@@ -53,6 +54,7 @@ def build_markdown_summary(
     phrase_hash: str,
     top_text: str,
     bottom_text: str,
+    generation_method: str,
     image_metadata: dict,
     image_hash: str,
     dimensions: Tuple[int, int],
@@ -93,7 +95,8 @@ def build_markdown_summary(
 - **Hash SHA-256 de imagen:** `{image_hash[:16]}...`
 
 ### 2. Contenido Textual (Cadáver Exquisito)
-- **Frase original extraída del PDF:**
+- **Método de composición textual:** `{generation_method}`
+- **Frase generada / seleccionada:**
   > "{phrase}"
 - **Hash SHA-256 de frase:** `{phrase_hash[:16]}...`
 - **Distribución visual:**
@@ -117,7 +120,6 @@ async def main_async() -> None:
 
     print(f"[BOT] Iniciando ciclo de ejecución. Modo Dry Run: {args.dry_run}")
 
-    # Rutas clave
     state_file = ROOT_DIR / "data" / "state.json"
     pdf_file = ROOT_DIR / "data" / "corpus.pdf"
     local_images_dir = ROOT_DIR / "data" / "images"
@@ -131,16 +133,39 @@ async def main_async() -> None:
     used_images = state.get("used_image_hashes", [])
     print(f"[ESTADO] Frases previamente usadas: {len(used_phrases)} | Imágenes usadas: {len(used_images)}")
 
-    # 2. Extraer frases y seleccionar candidata
-    phrases = extract_phrases_from_pdf(pdf_file)
-    selected_phrase = get_available_phrase(phrases, used_phrases)
+    # 2. Extracción y generación de frase (Markov o Verbatim)
+    corpus_sentences = extract_phrases_from_pdf(pdf_file)
+    selected_phrase = None
+    generation_method = "verbatim_extract"
+
+    # Alternar con 50% de probabilidad hacia síntesis de Markov
+    use_markov = random.random() < 0.5
+    if use_markov:
+        print("[TEXTO] Intentando generación mediante Cadenas de Markov...")
+        markov_candidate = generate_markov_sentence(
+            sentences=corpus_sentences,
+            used_hashes=used_phrases,
+            compute_hash_fn=compute_hash,
+            min_words=5,
+            max_words=15,
+        )
+        if markov_candidate:
+            selected_phrase = markov_candidate
+            generation_method = "markov_chain"
+            print(f"[TEXTO] Aforismo Markov sintetizado exitosamente.")
+
+    # Si Markov no converge o se seleccionó verbatim
+    if not selected_phrase:
+        selected_phrase = get_available_phrase(corpus_sentences, used_phrases)
+        generation_method = "verbatim_extract"
+        print(f"[TEXTO] Seleccionada frase literal del corpus.")
 
     if not selected_phrase:
-        print("ERROR CRÍTICO: Se han agotado las frases disponibles en el PDF.")
+        print("ERROR CRÍTICO: No hay frases disponibles en el corpus.")
         sys.exit(1)
 
     phrase_hash = compute_hash(selected_phrase)
-    print(f"[TEXTO] Frase seleccionada: \"{selected_phrase}\" (Hash: {phrase_hash[:12]}...)")
+    print(f"[TEXTO] Frase ({generation_method}): \"{selected_phrase}\" (Hash: {phrase_hash[:12]}...)")
 
     # 3. Inicializar pool de X si existen credenciales
     x_user = os.getenv("X_USERNAME")
@@ -154,17 +179,17 @@ async def main_async() -> None:
             pool = await initialize_x_pool(db_path, x_user, x_token, x_ct0)
             is_active = await verify_x_account_status(pool, x_user)
             if not is_active:
-                print("[X] Sesión no activa en X. Se utilizará contingencia local.")
+                print("[X] Sesión no activa en X. Conmutando a reserva local.")
                 pool = None
         except Exception as exc:
-            print(f"[X] Excepción al inicializar pool de X: {exc}. Se utilizará contingencia.")
+            print(f"[X] Excepción en pool: {exc}. Conmutando a reserva local.")
             pool = None
     else:
-        print("[X] Credenciales de X no detectadas. Se utilizará contingencia local.")
+        print("[X] Credenciales no disponibles. Conmutando a reserva local.")
 
     active_users = get_active_usernames(allowlist_file) if allowlist_file.exists() else []
 
-    # 4. Adquirir imagen (X con fallback a imágenes locales)
+    # 4. Adquirir imagen (X con fallback local)
     raw_img_bytes, img_hash, img_metadata = await acquire_image_with_fallback(
         pool=pool,
         active_usernames=active_users,
@@ -173,7 +198,7 @@ async def main_async() -> None:
     )
     print(f"[IMAGEN] Fuente seleccionada: {img_metadata['source_type']} (Hash: {img_hash[:12]}...)")
 
-    # 5. Procesamiento gráfico con Pillow
+    # 5. Renderizado con Pillow
     sanitized_image = load_and_sanitize_image(io.BytesIO(raw_img_bytes))
     top_text, bottom_text = split_phrase_into_meme_layout(selected_phrase)
 
@@ -192,11 +217,11 @@ async def main_async() -> None:
 
     post_info = None
 
-    # 6. Publicación si NO es dry-run
+    # 6. Publicación si no es dry-run
     if not args.dry_run:
         print("[PUBLICACIÓN] Publicando en Bluesky...")
-        post_caption = f"{selected_phrase}\n\n#cadáverexquisito #bot"
-        alt_description = f"Meme generado por bot de cadáver exquisito: '{selected_phrase}'"
+        post_caption = f"{selected_phrase}\n\n#cadáverexquisito #bot #markov"
+        alt_description = f"Meme de cadáver exquisito digital: '{selected_phrase}'"
 
         try:
             post_info = publish_meme_to_bluesky(
@@ -211,7 +236,7 @@ async def main_async() -> None:
             print(f"ERROR CRÍTICO AL PUBLICAR: {exc}")
             sys.exit(1)
 
-        # 7. Persistir en el estado
+        # 7. Persistir en el estado con identificador de Markov
         text_pos = "top_and_bottom" if (top_text and bottom_text) else ("top_only" if top_text else "bottom_only")
         lines_count = (1 if top_text else 0) + (1 if bottom_text else 0)
         now_iso = datetime.now(timezone.utc).isoformat()
@@ -227,6 +252,8 @@ async def main_async() -> None:
             "source_tweet_url": img_metadata.get("source_tweet_url", ""),
             "source_tweet_id": img_metadata.get("source_tweet_id", ""),
             "fallback_activated": img_metadata.get("fallback_activated", False),
+            "generation_method": generation_method,
+            "is_markov": (generation_method == "markov_chain"),
             "phrase_text": selected_phrase,
             "lines_count": lines_count,
             "text_position": text_pos,
@@ -252,6 +279,7 @@ async def main_async() -> None:
         phrase_hash=phrase_hash,
         top_text=top_text,
         bottom_text=bottom_text,
+        generation_method=generation_method,
         image_metadata=img_metadata,
         image_hash=img_hash,
         dimensions=(w, h),
