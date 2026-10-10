@@ -17,11 +17,12 @@
       "text_position": "top_and_bottom",
       "aspect_ratio": 1.5,
       "approx_luminosity": 106.86,
-      "likes": 0,
+      "likes": 1,
       "reposts": 0,
       "replies": 0,
       "quotes": 0,
-      "score": 0.0
+      "score": 0.0,
+      "metrics_updated_at": "2026-10-10T15:06:00.389474+00:00"
     },
     {
       "phrase_hash": "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2",
@@ -43,7 +44,8 @@
       "reposts": 0,
       "replies": 0,
       "quotes": 0,
-      "score": 0.0
+      "score": 0.0,
+      "metrics_updated_at": "2026-10-10T15:06:00.389474+00:00"
     },
     {
       "phrase_hash": "63d418b5814e6af53a30e868eb0869ec8aaac9e2bfc35519f28ef7b3b832cb4d",
@@ -67,7 +69,8 @@
       "reposts": 0,
       "replies": 0,
       "quotes": 0,
-      "score": 0.0
+      "score": 0.0,
+      "metrics_updated_at": "2026-10-10T15:06:00.389474+00:00"
     }
   ],
   "used_phrase_hashes": [
@@ -79,5 +82,6 @@
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
     "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284",
     "411fac4684863a290a216e8633456c0f88569bbda6b9565f5f6b27370c61a688"
-  ]
+  ],
+  "last_metrics_refresh": "2026-10-10T15:06:00.389474+00:00"
 }
