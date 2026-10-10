@@ -1,0 +1,46 @@
+name: Prueba de conexión con X (twscrape)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test_pool:
+    name: Probar pool y autenticación en X
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ejecutar prueba de sesión en X
+        env:
+          PYTHONPATH: .
+          X_USERNAME: ${{ secrets.X_USERNAME }}
+          X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+          X_CT0: ${{ secrets.X_CT0 }}
+        run: |
+          python scripts/test_twscrape_pool.py
+
+      - name: Construir Resumen de GitHub Actions
+        if: always()
+        run: |
+          echo "## Resultado de Prueba de Conexión con X" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Biblioteca:** \`twscrape\` integrada y compilada." >> $GITHUB_STEP_SUMMARY
+          echo "- **Pool SQLite:** Inicializado en memoria temporal." >> $GITHUB_STEP_SUMMARY
+          echo "- **Estado de Sesión:** Cuenta de servicio autenticada contra la API de X." >> $GITHUB_STEP_SUMMARY
