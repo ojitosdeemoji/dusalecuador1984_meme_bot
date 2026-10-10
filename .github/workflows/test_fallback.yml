@@ -1,0 +1,54 @@
+name: Prueba de contingencia (fallback)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test_fallback:
+    name: Simular fallo de X y verificar reserva local
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ejecutar pruebas unitarias de contingencia
+        run: |
+          pytest -v tests/test_fallback.py
+
+      - name: Ejecutar simulación de contingencia
+        env:
+          PYTHONPATH: .
+        run: |
+          python scripts/test_fallback.py
+
+      - name: Subir artefacto de imagen de contingencia
+        uses: actions/upload-artifact@v4
+        with:
+          name: fallback-preview
+          path: fallback_preview.jpg
+          retention-days: 7
+
+      - name: Publicar Resumen de GitHub Actions
+        if: always()
+        run: |
+          if [ -f "fallback_summary.md" ]; then
+            cat fallback_summary.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## Error en la prueba: no se generó el resumen" >> $GITHUB_STEP_SUMMARY
+          fi
