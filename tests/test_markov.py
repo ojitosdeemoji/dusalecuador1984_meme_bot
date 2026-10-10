@@ -14,7 +14,7 @@ def test_tokenize_sentence():
     tokens = tokenize_sentence('«El fenómeno de la conciencia es determinante».')
     assert tokens[0] == "El"
     assert "conciencia" in tokens
-    assert len(tokens) == 6
+    assert len(tokens) == 7
 
 
 def test_build_markov_chain():
