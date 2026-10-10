@@ -13,12 +13,12 @@ from src.x_config import get_active_usernames
 from src.x_scraper import (
     initialize_x_pool,
     verify_x_account_status,
-    search_user_image_candidates,
+    get_user_timeline_image_candidates,
 )
 
 
 async def main_async() -> None:
-    print("[BÚSQUEDA X] Iniciando inspección de cuentas autorizadas...")
+    print("[EXTRACCIÓN X] Iniciando inspección de cuentas autorizadas...")
 
     username = os.getenv("X_USERNAME")
     auth_token = os.getenv("X_AUTH_TOKEN")
@@ -35,7 +35,7 @@ async def main_async() -> None:
         print("ERROR: No hay cuentas activas en la allowlist.")
         sys.exit(1)
 
-    print(f"[BÚSQUEDA X] Cuentas objetivo en allowlist: {active_users}")
+    print(f"[EXTRACCIÓN X] Cuentas objetivo en allowlist: {active_users}")
 
     db_path = ROOT_DIR / "accounts.db"
     pool = await initialize_x_pool(db_path, username, auth_token, ct0)
@@ -47,26 +47,20 @@ async def main_async() -> None:
 
     all_found = []
 
-    # Probar búsqueda para la primera cuenta activa de la lista
-    target = active_users[0]
-    print(f"\n[BÚSQUEDA X] Consultando tweets con imagen de: @{target}...")
-
-    candidates = await search_user_image_candidates(pool, target, limit=5)
-    print(f"[BÚSQUEDA X] Imágenes localizadas en @{target}: {len(candidates)}")
-
-    all_found.extend(candidates)
-
-    if not all_found:
-        print("AVISO: No se encontraron imágenes recientes en la primera cuenta de la allowlist.")
-        # Intentar con la segunda cuenta si existe
-        if len(active_users) > 1:
-            second_target = active_users[1]
-            print(f"[BÚSQUEDA X] Intentando con segunda cuenta: @{second_target}...")
-            candidates_2 = await search_user_image_candidates(pool, second_target, limit=5)
-            all_found.extend(candidates_2)
+    # Recorrer las cuentas activas hasta encontrar candidatos válidos
+    for target in active_users:
+        print(f"\n[EXTRACCIÓN X] Consultando muro de @{target}...")
+        try:
+            candidates = await get_user_timeline_image_candidates(pool, target, limit=10)
+            print(f"[EXTRACCIÓN X] Fotos detectadas en @{target}: {len(candidates)}")
+            if candidates:
+                all_found.extend(candidates)
+                break
+        except Exception as exc:
+            print(f"[EXTRACCIÓN X] Error consultando @{target}: {exc}")
 
     if not all_found:
-        print("ERROR: No se detectaron imágenes en las cuentas consultadas. Verifique la allowlist.")
+        print("ERROR: No se detectaron imágenes en las cuentas autorizadas consultadas.")
         sys.exit(1)
 
     # Imprimir muestra de metadatos detectados
@@ -80,10 +74,10 @@ async def main_async() -> None:
 
     # Guardar reporte para GitHub Actions
     summary_file = ROOT_DIR / "x_search_summary.md"
-    content = f"""## Reporte de Búsqueda de Imágenes en X (twscrape)
+    content = f"""## Reporte de Extracción de Imágenes en X (twscrape)
 
 - **Sesión de servicio:** @{username.strip().lstrip('@')} (Activa)
-- **Cuenta objetivo consultada:** @{all_found[0]['author_username']}
+- **Cuenta fuente consultada:** @{all_found[0]['author_username']}
 - **Total de imágenes encontradas:** {len(all_found)}
 
 ### Muestra de Publicaciones Detectadas:
@@ -92,7 +86,7 @@ async def main_async() -> None:
         content += f"- **Tweet:** [{item['tweet_url']}]({item['tweet_url']}) | **Imagen:** `{item['image_url'][:60]}...`\n"
 
     summary_file.write_text(content, encoding="utf-8")
-    print(f"✔ BÚSQUEDA EXITOSA: Metadatos recuperados y guardados en {summary_file.name}.")
+    print(f"✔ EXTRACCIÓN EXITOSA: Metadatos recuperados y guardados en {summary_file.name}.")
 
 
 def main() -> None:
