@@ -1,5 +1,6 @@
 """Script de recopilación e informe de métricas de publicaciones en Bluesky."""
 
+from datetime import datetime, timezone
 import os
 import sys
 from pathlib import Path
@@ -8,7 +9,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from src.state_manager import load_state
+from src.state_manager import load_state, save_state, update_published_metrics
 from src.metrics_collector import fetch_posts_metrics, calculate_age_hours
 
 
@@ -29,7 +30,7 @@ def main() -> None:
 
     # Filtrar entradas que posean URI válida
     uris = [entry["uri"] for entry in published if entry.get("uri")]
-    print(f"[MÉTRICAS] Publicaciones encontradas en estado: {len(published)} (Con URI: {len(uris)})")
+    print(f"[MÉTRICAS] Publicaciones encontradas: {len(published)} (Con URI: {len(uris)})")
 
     if not uris:
         print("AVISO: Ninguna publicación tiene URI registrada para consultar.")
@@ -43,11 +44,17 @@ def main() -> None:
 
     print(f"[MÉTRICAS] Métricas recuperadas exitosamente para {len(metrics_by_uri)} publicaciones.")
 
-    # Construir informe Markdown
+    # 1. Persistir métricas en data/state.json
+    now_iso = datetime.now(timezone.utc).isoformat()
+    updated_count = update_published_metrics(state, metrics_by_uri, now_iso)
+    save_state(state_path, state)
+    print(f"[MÉTRICAS] Persistencia completada: {updated_count} entradas actualizadas en {state_path.name}.")
+
+    # 2. Construir informe Markdown para GitHub Actions
     summary_path = ROOT_DIR / "metrics_summary.md"
     rows = []
 
-    print("\n--- RESUMEN ACTUAL DE ENGAGEMENT ---")
+    print("\n--- RESUMEN ACTUALIZADO DE ENGAGEMENT (PERSISTIDO) ---")
     for idx, entry in enumerate(published, start=1):
         uri = entry.get("uri", "")
         post_metrics = metrics_by_uri.get(uri, {"likes": 0, "reposts": 0, "replies": 0, "quotes": 0})
@@ -68,13 +75,14 @@ def main() -> None:
         rows.append(
             f"| #{idx} | [{short_phrase}]({url}) | {age_hours:.1f}h | {likes} | {reposts} | {replies} | {quotes} |"
         )
-    print("------------------------------------\n")
+    print("------------------------------------------------------\n")
 
-    markdown_content = f"""## Reporte de Métricas de Engagement (Bluesky)
+    markdown_content = f"""## Reporte de Métricas Persistidas en el Estado
 
 - **Total de publicaciones consultadas:** {len(published)}
+- **Entradas actualizadas en state.json:** {updated_count}
+- **Última sincronización:** `{now_iso}`
 - **Protocolo:** AT Protocol (\`app.bsky.feed.getPosts\`)
-- **Modo:** Solo lectura pasiva (sin bots ni interacciones automáticas)
 
 | # | Publicación | Antigüedad | Likes | Reposts | Respuestas | Citas |
 |---|---|---|---|---|---|---|
