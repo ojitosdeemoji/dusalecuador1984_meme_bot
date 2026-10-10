@@ -1,0 +1,66 @@
+name: Validar proyecto
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validar sintaxis, pruebas y fixture
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Comprobar sintaxis y compilación
+        run: |
+          python -m compileall src tests scripts
+
+      - name: Ejecutar pruebas unitarias
+        run: |
+          pytest -v tests/
+
+      - name: Generar meme con fixture
+        run: |
+          python scripts/generate_fixture_meme.py
+
+      - name: Comprobar existencia de out.jpg
+        run: |
+          if [ ! -f "out.jpg" ]; then
+            echo "ERROR: out.jpg no fue generado."
+            exit 1
+          fi
+          echo "out.jpg generado correctamente."
+          ls -lh out.jpg
+
+      - name: Subir artifact de previsualización
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixture-preview
+          path: out.jpg
+          retention-days: 7
+
+      - name: Construir Resumen de GitHub Actions
+        run: |
+          echo "## Resultado de la Validación del Proyecto" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Estado de compilación:** Sintaxis verificada sin errores." >> $GITHUB_STEP_SUMMARY
+          echo "- **Pruebas unitarias:** Todos los tests en \`tests/\` pasaron con éxito." >> $GITHUB_STEP_SUMMARY
+          echo "- **Generación de meme:** \`out.jpg\` producido y exportado." >> $GITHUB_STEP_SUMMARY
+          echo "- **Artefacto:** Archivo disponible para descarga en la sección superior (*fixture-preview*)." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "El núcleo de composición gráfica y persistencia está operativo." >> $GITHUB_STEP_SUMMARY
