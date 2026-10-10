@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validar sintaxis, pruebas, fixture, PDF, imágenes, estado y allowlist
+    name: Validar sintaxis, pruebas, fixture, PDF, imágenes, estado y Markov
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
         run: |
           python -m compileall src tests scripts
 
-      - name: Ejecutar pruebas unitarias
+      - name: Ejecutar pruebas unitarias completas
         run: |
           pytest -v tests/
 
@@ -73,6 +73,12 @@ jobs:
         run: |
           python scripts/validate_allowlist.py
 
+      - name: Probar generador sintético de cadenas de Markov
+        env:
+          PYTHONPATH: .
+        run: |
+          python scripts/test_markov.py
+
       - name: Subir artifact de previsualización
         uses: actions/upload-artifact@v4
         with:
@@ -84,7 +90,6 @@ jobs:
         run: |
           echo "## Resultado de la Validación del Proyecto" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Compilación y Tests:** Pruebas unitarias completas aprobadas." >> $GITHUB_STEP_SUMMARY
-          echo "- **Insumos Locales:** Corpus PDF e imágenes de reserva operativas." >> $GITHUB_STEP_SUMMARY
-          echo "- **Persistencia:** \`data/state.json\` íntegro." >> $GITHUB_STEP_SUMMARY
-          echo "- **Fuentes Externas:** \`data/x_allowlist.json\` validada con fuentes activas delimitadas." >> $GITHUB_STEP_SUMMARY
+          echo "- **Compilación y Tests:** Pruebas unitarias completas aprobadas (incluyendo Markov)." >> $GITHUB_STEP_SUMMARY
+          echo "- **Corpus y Síntesis:** Modelo de cadenas de Markov operativo sobre \`data/corpus.pdf\`." >> $GITHUB_STEP_SUMMARY
+          echo "- **Insumos y Estado:** Catálogo visual y persistencia auditados sin errores." >> $GITHUB_STEP_SUMMARY
