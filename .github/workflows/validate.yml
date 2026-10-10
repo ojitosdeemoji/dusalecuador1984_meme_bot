@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validar sintaxis, pruebas, fixture, PDF, imágenes, estado y Markov
+    name: Validar sintaxis, pruebas, fixture, PDF, imágenes, estado, Markov y decisión
     runs-on: ubuntu-latest
 
     steps:
@@ -90,6 +90,6 @@ jobs:
         run: |
           echo "## Resultado de la Validación del Proyecto" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Compilación y Tests:** Pruebas unitarias completas aprobadas (incluyendo Markov)." >> $GITHUB_STEP_SUMMARY
-          echo "- **Corpus y Síntesis:** Modelo de cadenas de Markov operativo sobre \`data/corpus.pdf\`." >> $GITHUB_STEP_SUMMARY
+          echo "- **Compilación y Tests:** Pruebas unitarias completas aprobadas (Markov y Motor de Decisión incluidos)." >> $GITHUB_STEP_SUMMARY
+          echo "- **Bucle de Aprendizaje:** Motor de Exploración vs. Explotación operativo." >> $GITHUB_STEP_SUMMARY
           echo "- **Insumos y Estado:** Catálogo visual y persistencia auditados sin errores." >> $GITHUB_STEP_SUMMARY
