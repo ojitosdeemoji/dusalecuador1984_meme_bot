@@ -1,10 +1,13 @@
 name: Publicar o simular meme
 
 on:
+  schedule:
+    # 3 ejecuciones al día: 11:20 UTC, 17:20 UTC y 23:20 UTC
+    - cron: '20 11,17,23 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Modo simulación (Dry Run): genera artefacto y resumen sin publicar ni alterar estado'
+        description: 'Modo simulación (Dry Run): genera artefacto sin publicar ni alterar estado'
         type: boolean
         default: true
         required: true
@@ -20,7 +23,7 @@ jobs:
   run_pipeline:
     name: Ejecución del bot
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
 
     steps:
       - name: Descargar repositorio
@@ -37,6 +40,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Retardo editorial aleatorio (Jitter)
+        if: github.event_name == 'schedule'
+        run: |
+          # Retardo entre 0 y 900 segundos (0 a 15 minutos) solo para ejecuciones programadas
+          DELAY=$((RANDOM % 900))
+          echo "Disparador programado detectado (schedule)."
+          echo "Aplicando retardo editorial de $DELAY segundos para distribución orgánica..."
+          sleep $DELAY
+
       - name: Ejecutar motor del bot
         env:
           PYTHONPATH: .
@@ -46,19 +58,21 @@ jobs:
           X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
           X_CT0: ${{ secrets.X_CT0 }}
         run: |
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            python scripts/run_bot.py --dry-run
-          else
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.dry_run }}" = "false" ]; then
+            echo "Ejecutando en MODO PRODUCCIÓN (publicación activa)..."
             python scripts/run_bot.py
+          else
+            echo "Ejecutando en MODO SIMULACIÓN (dry-run)..."
+            python scripts/run_bot.py --dry-run
           fi
 
       - name: Guardar estado actualizado en el repositorio
-        if: ${{ inputs.dry_run == false }}
+        if: ${{ github.event_name == 'schedule' || inputs.dry_run == false }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/state.json
-          git diff --staged --quiet || (git commit -m "bot: registrar publicación en state.json [skip ci]" && git push)
+          git diff --staged --quiet || (git commit -m "bot: registrar publicación programada en state.json [skip ci]" && git push)
 
       - name: Subir artefacto de previsualización de meme
         uses: actions/upload-artifact@v4
