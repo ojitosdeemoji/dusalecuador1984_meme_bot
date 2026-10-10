@@ -1,0 +1,46 @@
+name: Prueba de búsqueda en X (twscrape)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test_search:
+    name: Probar búsqueda de tweets con fotos
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ejecutar script de búsqueda en X
+        env:
+          PYTHONPATH: .
+          X_USERNAME: ${{ secrets.X_USERNAME }}
+          X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+          X_CT0: ${{ secrets.X_CT0 }}
+        run: |
+          python scripts/test_x_search.py
+
+      - name: Publicar Resumen de GitHub Actions
+        if: always()
+        run: |
+          if [ -f "x_search_summary.md" ]; then
+            cat x_search_summary.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## Error en la búsqueda: no se generó el resumen" >> $GITHUB_STEP_SUMMARY
+          fi
