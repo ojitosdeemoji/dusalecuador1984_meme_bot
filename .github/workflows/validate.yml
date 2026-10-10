@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validar sintaxis, pruebas y fixture
+    name: Validar sintaxis, pruebas, fixture y PDF
     runs-on: ubuntu-latest
 
     steps:
@@ -49,6 +49,12 @@ jobs:
           echo "out.jpg generado correctamente."
           ls -lh out.jpg
 
+      - name: Validar y auditar corpus PDF
+        env:
+          PYTHONPATH: .
+        run: |
+          python scripts/validate_pdf.py
+
       - name: Subir artifact de previsualización
         uses: actions/upload-artifact@v4
         with:
@@ -62,7 +68,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Estado de compilación:** Sintaxis verificada sin errores." >> $GITHUB_STEP_SUMMARY
           echo "- **Pruebas unitarias:** Todos los tests en \`tests/\` pasaron con éxito." >> $GITHUB_STEP_SUMMARY
-          echo "- **Generación de meme:** \`out.jpg\` producido y exportado." >> $GITHUB_STEP_SUMMARY
-          echo "- **Artefacto:** Archivo disponible para descarga en la sección superior (*fixture-preview*)." >> $GITHUB_STEP_SUMMARY
+          echo "- **Generación de meme fixture:** \`out.jpg\` producido y disponible en artefactos." >> $GITHUB_STEP_SUMMARY
+          echo "- **Corpus textual:** \`data/corpus.pdf\` verificado y analizado correctamente." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "El núcleo de composición gráfica y persistencia está operativo." >> $GITHUB_STEP_SUMMARY
+          echo "Tanto el motor gráfico como el corpus textual están listos para la composición real." >> $GITHUB_STEP_SUMMARY
