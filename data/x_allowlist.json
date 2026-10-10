@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "description": "Lista blanca de cuentas autorizadas para extracción de material visual en X/Twitter",
+  "accounts": [
+    {
+      "username": "joseantoniokast",
+      "label": "1",
+      "notes": "Archivo",
+      "enabled": true
+    },
+    {
+      "username": "PresidenteKast",
+      "label": "Internet",
+      "notes": "Imágenes",
+      "enabled": true
+    },
+    {
+      "username": "GobiernodeChile",
+      "label": "2",
+      "notes": "más imagenes",
+      "enabled": true
+    },
+    {
+      "username": "voceriagobierno",
+      "label": "3",
+      "notes": "más imagenes",
+      "enabled": true
+    }
+  ]
+}
