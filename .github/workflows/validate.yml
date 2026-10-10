@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validar sintaxis, pruebas, fixture, PDF, imágenes y estado
+    name: Validar sintaxis, pruebas, fixture, PDF, imágenes, estado y allowlist
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
         run: |
           python -m compileall src tests scripts
 
-      - name: Ejecutar pruebas unitarias (incluye prevención de duplicados)
+      - name: Ejecutar pruebas unitarias
         run: |
           pytest -v tests/
 
@@ -67,6 +67,12 @@ jobs:
         run: |
           python scripts/audit_state.py
 
+      - name: Validar catálogo de allowlist de X
+        env:
+          PYTHONPATH: .
+        run: |
+          python scripts/validate_allowlist.py
+
       - name: Subir artifact de previsualización
         uses: actions/upload-artifact@v4
         with:
@@ -78,6 +84,7 @@ jobs:
         run: |
           echo "## Resultado de la Validación del Proyecto" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Compilación y Tests:** Pruebas unitarias y reglas anti-duplicados aprobadas." >> $GITHUB_STEP_SUMMARY
-          echo "- **Insumos:** Corpus PDF e imágenes locales operativas." >> $GITHUB_STEP_SUMMARY
-          echo "- **Persistencia:** \`data/state.json\` auditado sin inconsistencias." >> $GITHUB_STEP_SUMMARY
+          echo "- **Compilación y Tests:** Pruebas unitarias completas aprobadas." >> $GITHUB_STEP_SUMMARY
+          echo "- **Insumos Locales:** Corpus PDF e imágenes de reserva operativas." >> $GITHUB_STEP_SUMMARY
+          echo "- **Persistencia:** \`data/state.json\` íntegro." >> $GITHUB_STEP_SUMMARY
+          echo "- **Fuentes Externas:** \`data/x_allowlist.json\` validada con fuentes activas delimitadas." >> $GITHUB_STEP_SUMMARY
