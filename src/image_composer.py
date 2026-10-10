@@ -4,8 +4,8 @@ import hashlib
 import io
 import textwrap
 from pathlib import Path
-from typing import Optional, Tuple
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from typing import Dict, Optional, Tuple
+from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageStat
 
 # Protección contra ataques de descompresión de imágenes (bombas zip)
 Image.MAX_IMAGE_PIXELS = 35_000_000
@@ -99,7 +99,6 @@ def calculate_wrapped_text(
     if current_line:
         lines.append(" ".join(current_line))
 
-    # Calcular altura total
     total_h = 0
     max_line_w = 0
     for line in lines:
@@ -133,7 +132,6 @@ def render_meme(
         positions.append(("bottom", bottom_text.strip().upper()))
 
     for pos, raw_str in positions:
-        # Calcular tamaño de fuente dinámico de mayor a menor
         font_size = int(img_h * 0.08)
         min_font_size = max(14, int(img_h * 0.03))
         selected_font = get_system_font(font_size)
@@ -146,7 +144,6 @@ def render_meme(
 
         stroke_w = max(2, int(font_size * 0.08))
 
-        # Determinar coordenadas verticales
         if pos == "top":
             current_y = int(img_h * 0.04)
         else:
@@ -158,7 +155,6 @@ def render_meme(
             line_h = bbox[3] - bbox[1]
             x = (img_w - line_w) // 2
 
-            # Dibujar texto con contorno negro y relleno blanco
             draw.text(
                 (x, current_y),
                 line,
@@ -187,9 +183,22 @@ def export_to_bluesky_jpeg(image: Image.Image) -> bytes:
         if quality < 50:
             break
 
-    # Si aún excede, reducir dimensiones un 20% y guardar
     w, h = image.size
     smaller_img = image.resize((int(w * 0.8), int(h * 0.8)), Image.Resampling.LANCZOS)
     buffer = io.BytesIO()
     smaller_img.save(buffer, format="JPEG", quality=75, optimize=True)
     return buffer.getvalue()
+
+
+def analyze_image_metrics(image: Image.Image) -> Dict[str, float]:
+    """Calcula proporción geométrica y luminosidad perceptual promedio de la imagen."""
+    w, h = image.size
+    aspect_ratio = round(w / h, 2)
+    # Medir luminancia en escala de grises (0 a 255)
+    gray = image.convert("L")
+    stat = ImageStat.Stat(gray)
+    luminosity = round(stat.mean[0], 2)
+    return {
+        "aspect_ratio": aspect_ratio,
+        "approx_luminosity": luminosity,
+    }
