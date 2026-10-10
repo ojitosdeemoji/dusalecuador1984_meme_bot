@@ -22,12 +22,36 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2",
+      "image_hash": "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxjkiemisk2v",
+      "cid": "bafyreidgx7ssumelqplcjtrkqpyqw4fnous24z4wa2audwu4vj3s7652la",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxjkiemisk2v",
+      "published_at": "2026-10-10T13:04:58.949339+00:00",
+      "source_type": "local_image",
+      "source_file": "b.jpg",
+      "source_author": "archivo_local",
+      "source_license": "autorizada_local",
+      "phrase_text": "Al fondo, un cartel de colores, demasiado grande para hallarse en un interior, estaba pegado a la pared.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 53.67,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
-    "38b6bef40b4ac3287481777c0fc3e20252db8e066dbe7b06200e6dbd5b99f425"
+    "38b6bef40b4ac3287481777c0fc3e20252db8e066dbe7b06200e6dbd5b99f425",
+    "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2"
   ],
   "used_image_hashes": [
-    "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3"
+    "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+    "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284"
   ]
 }
