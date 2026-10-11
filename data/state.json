@@ -99,19 +99,49 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "75bc170f115dcf5ef03e9fbdc07629b5db189d5364c6669919922d3e46e802ad",
+      "image_hash": "0d5aa3ee7440259a21fb02964a5c4bffeed34b7588f856cb4b87bde52674ea63",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxkwi3c5i624",
+      "cid": "bafyreiarq2r2hrphex3ikmkiiu7r4avgqgutjsm7o2my2mnfpfui4axkza",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxkwi3c5i624",
+      "published_at": "2026-10-11T02:12:13.878908+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HDASqltX0AEcAbS.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2031143962497449997",
+      "source_tweet_id": "2031143962497449997",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "No funcionaba con frecuencia y en esta época la corriente se cortaba durante las horas de día.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.33,
+      "approx_luminosity": 159.23,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
     "38b6bef40b4ac3287481777c0fc3e20252db8e066dbe7b06200e6dbd5b99f425",
     "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2",
     "63d418b5814e6af53a30e868eb0869ec8aaac9e2bfc35519f28ef7b3b832cb4d",
-    "d12647617e3c222ca8c4e352ca004a1755efc0257e5a5b431d791065a6ed5f90"
+    "d12647617e3c222ca8c4e352ca004a1755efc0257e5a5b431d791065a6ed5f90",
+    "75bc170f115dcf5ef03e9fbdc07629b5db189d5364c6669919922d3e46e802ad"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
     "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284",
     "411fac4684863a290a216e8633456c0f88569bbda6b9565f5f6b27370c61a688",
-    "586fbca7f4f0f7a2d4cd0689c6befdc9e15985f96dc8c293b56cb43af4e0e92b"
+    "586fbca7f4f0f7a2d4cd0689c6befdc9e15985f96dc8c293b56cb43af4e0e92b",
+    "0d5aa3ee7440259a21fb02964a5c4bffeed34b7588f856cb4b87bde52674ea63"
   ],
   "last_metrics_refresh": "2026-10-10T15:10:25.887495+00:00"
 }
