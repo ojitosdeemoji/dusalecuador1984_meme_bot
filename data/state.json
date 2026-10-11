@@ -129,6 +129,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-11T11:17:38.417972+00:00"
+    },
+    {
+      "phrase_hash": "7fe2004c326e975dc10b7e5a6d415da443e51ea22db3600e224ff0ab25066f96",
+      "image_hash": "f3883966f5b529dd5a2a63bc9450c1e88556057b2b40ea3a08f37eebac16faf2",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxmhqnkbm726",
+      "cid": "bafyreie3iy5obhucnxuuotx2g262viilu7flq2u2pc7poe6qe5pp2jd47u",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxmhqnkbm726",
+      "published_at": "2026-10-11T16:53:54.763440+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HC_ZF8EacAA11YG.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2031080658206965818",
+      "source_tweet_id": "2031080658206965818",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Esto era parte de las restricciones con que se preparaba la Semana del Odio.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 0.75,
+      "approx_luminosity": 110.36,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -136,14 +164,16 @@
     "0810eb305a35e1e76599d27aaa15ab2cc2ae558a7aea72a025a7be5aaca8e1d2",
     "63d418b5814e6af53a30e868eb0869ec8aaac9e2bfc35519f28ef7b3b832cb4d",
     "d12647617e3c222ca8c4e352ca004a1755efc0257e5a5b431d791065a6ed5f90",
-    "75bc170f115dcf5ef03e9fbdc07629b5db189d5364c6669919922d3e46e802ad"
+    "75bc170f115dcf5ef03e9fbdc07629b5db189d5364c6669919922d3e46e802ad",
+    "7fe2004c326e975dc10b7e5a6d415da443e51ea22db3600e224ff0ab25066f96"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
     "92015b4c924b3dddac65577f36dec24e186965d02ed4a5b94647e07023708284",
     "411fac4684863a290a216e8633456c0f88569bbda6b9565f5f6b27370c61a688",
     "586fbca7f4f0f7a2d4cd0689c6befdc9e15985f96dc8c293b56cb43af4e0e92b",
-    "0d5aa3ee7440259a21fb02964a5c4bffeed34b7588f856cb4b87bde52674ea63"
+    "0d5aa3ee7440259a21fb02964a5c4bffeed34b7588f856cb4b87bde52674ea63",
+    "f3883966f5b529dd5a2a63bc9450c1e88556057b2b40ea3a08f37eebac16faf2"
   ],
   "last_metrics_refresh": "2026-10-11T11:17:38.417972+00:00"
 }
