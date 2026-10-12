@@ -185,6 +185,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "55b085ef8d04ca59f6a9735e6b554bbaac2e69774ab3cdbff76f44af5df2422f",
+      "image_hash": "491f7064f1a7cc24dc2be7377e98a5729a19dcab238679905952cf4cf8deea8f",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxni7653nm2l",
+      "cid": "bafyreielpucylo2bwwrcmeewcopv75v3dmxztq5pnxxlk6uekqbvoydnr4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxni7653nm2l",
+      "published_at": "2026-10-12T02:34:41.607882+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HC15NNUXEAAwtp4.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2030412330295869811",
+      "source_tweet_id": "2030412330295869811",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Vestía sus shorts caquis y una boina.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 150.11,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -194,7 +222,8 @@
     "d12647617e3c222ca8c4e352ca004a1755efc0257e5a5b431d791065a6ed5f90",
     "75bc170f115dcf5ef03e9fbdc07629b5db189d5364c6669919922d3e46e802ad",
     "7fe2004c326e975dc10b7e5a6d415da443e51ea22db3600e224ff0ab25066f96",
-    "97d8883bd1ef750ccb281def3e079188951d266a21854d32415ec071b3011d98"
+    "97d8883bd1ef750ccb281def3e079188951d266a21854d32415ec071b3011d98",
+    "55b085ef8d04ca59f6a9735e6b554bbaac2e69774ab3cdbff76f44af5df2422f"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -203,7 +232,8 @@
     "586fbca7f4f0f7a2d4cd0689c6befdc9e15985f96dc8c293b56cb43af4e0e92b",
     "0d5aa3ee7440259a21fb02964a5c4bffeed34b7588f856cb4b87bde52674ea63",
     "f3883966f5b529dd5a2a63bc9450c1e88556057b2b40ea3a08f37eebac16faf2",
-    "a5945bbae5f955a75941c3b3aade87649c3b594d68f2b9537546f2dd5bb72671"
+    "a5945bbae5f955a75941c3b3aade87649c3b594d68f2b9537546f2dd5bb72671",
+    "491f7064f1a7cc24dc2be7377e98a5729a19dcab238679905952cf4cf8deea8f"
   ],
   "last_metrics_refresh": "2026-10-11T11:17:38.417972+00:00"
 }
