@@ -274,6 +274,34 @@
       "quotes": 0,
       "score": 1.0,
       "metrics_updated_at": "2026-10-13T12:30:37.873192+00:00"
+    },
+    {
+      "phrase_hash": "359295b4e9b709041b6e177c872a228d5cd3d0fa4d0b2680293f0bba4f5576b2",
+      "image_hash": "fe5c2d34cb9b55959d998b421c38a024a7e05ba096b1f5326bdd824706e9a191",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxro6qs5ue23",
+      "cid": "bafyreihbuznnwpulaxbivskcqz3fl2dcjorblby7pbupbfp4b5y2n4tkua",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxro6qs5ue23",
+      "published_at": "2026-10-13T18:32:29.017706+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HCnLsNwXQAAfS1R.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2029385222676963641",
+      "source_tweet_id": "2029385222676963641",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Con sus treinta y nueve años y una úlcera de vari ces por encima del tobillo derecho, subió lentamente, descansando varias veces.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 114.69,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -286,7 +314,8 @@
     "97d8883bd1ef750ccb281def3e079188951d266a21854d32415ec071b3011d98",
     "55b085ef8d04ca59f6a9735e6b554bbaac2e69774ab3cdbff76f44af5df2422f",
     "8df3a428aa62a09b85bbf711e4764a5c6958e7c0897983c55a94f4fabeb0639d",
-    "bf292c757c899a9073f9b448cebb35885feaa291e33974b586cca381aa31209e"
+    "bf292c757c899a9073f9b448cebb35885feaa291e33974b586cca381aa31209e",
+    "359295b4e9b709041b6e177c872a228d5cd3d0fa4d0b2680293f0bba4f5576b2"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -298,7 +327,8 @@
     "a5945bbae5f955a75941c3b3aade87649c3b594d68f2b9537546f2dd5bb72671",
     "491f7064f1a7cc24dc2be7377e98a5729a19dcab238679905952cf4cf8deea8f",
     "adddf4e7f42ecbff611c2fc444c5f39269559de16ccb922bfd05109252209199",
-    "e41d10e57e1830b6246477e44474dc8b7b9f39506ad506556dc00b9d7b87795b"
+    "e41d10e57e1830b6246477e44474dc8b7b9f39506ad506556dc00b9d7b87795b",
+    "fe5c2d34cb9b55959d998b421c38a024a7e05ba096b1f5326bdd824706e9a191"
   ],
   "last_metrics_refresh": "2026-10-13T12:30:37.873192+00:00"
 }
