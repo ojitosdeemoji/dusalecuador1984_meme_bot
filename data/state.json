@@ -388,6 +388,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "8bf99cbbe4bd7559c127d2bcbbc2646f499693f5eaa93646e735ddb01535a220",
+      "image_hash": "c40957e4d01d5d571782c74b3ea1c88a281c2376d91c91a585d9592166fa71db",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxuwvnawx224",
+      "cid": "bafyreihnolhxc6ug3uy5xcvydy77hycjtvje6p564emsxb3hkalcncoyo4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxuwvnawx224",
+      "published_at": "2026-10-15T01:46:26.318873+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HCgyfvDWYAAwEdy.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2028927160648364445",
+      "source_tweet_id": "2028927160648364445",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Winston la contempló unos momentos.",
+      "lines_count": 1,
+      "text_position": "bottom_only",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 154.81,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -404,7 +432,8 @@
     "359295b4e9b709041b6e177c872a228d5cd3d0fa4d0b2680293f0bba4f5576b2",
     "3ecd6fa028946e8e028920a789dd9aaa768b2cc30547d5b1328f18f66a62ca6c",
     "f6f238b465d13bd79e6bb769ae566416587981b6d25e604bd85771dfbde33405",
-    "3b1dacd32230dfe56c88619f8ab46b8de5c20540553899836469d7a29705ef9c"
+    "3b1dacd32230dfe56c88619f8ab46b8de5c20540553899836469d7a29705ef9c",
+    "8bf99cbbe4bd7559c127d2bcbbc2646f499693f5eaa93646e735ddb01535a220"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -420,7 +449,8 @@
     "fe5c2d34cb9b55959d998b421c38a024a7e05ba096b1f5326bdd824706e9a191",
     "522ed3e6097790a6a22465ca2ee8d2a4296cba3a27dba76e74e34ed9d3d2f5bf",
     "2451bc96c40228645059f38190f0713ade32f70ea49c62294e288bc4f9689782",
-    "55e1b372a603f190e61dcef34162bc46cdbf19ad515c5400ea67469ef8472d03"
+    "55e1b372a603f190e61dcef34162bc46cdbf19ad515c5400ea67469ef8472d03",
+    "c40957e4d01d5d571782c74b3ea1c88a281c2376d91c91a585d9592166fa71db"
   ],
   "last_metrics_refresh": "2026-10-14T09:58:16.965129+00:00"
 }
