@@ -419,6 +419,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-15T09:40:04.528728+00:00"
+    },
+    {
+      "phrase_hash": "66f66373683456345660ff71812954d8f30777f3f0ab5d23bb091a8afdf4131e",
+      "image_hash": "590ec116145878a51821fbdd7b95d31d314929340b54f36d415c54e484c311af",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxwfs2qg4i26",
+      "cid": "bafyreicgeomzq2cnz4oxcty3u52qvgtdrw7s7t7yeqwtgu5iha7ssad6hy",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxwfs2qg4i26",
+      "published_at": "2026-10-15T15:45:32.050054+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HCf6v2aW8AA1tSg.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2028865864401871122",
+      "source_tweet_id": "2028865864401871122",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Pero sólo el hecho de.",
+      "lines_count": 1,
+      "text_position": "bottom_only",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 129.04,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -436,7 +464,8 @@
     "3ecd6fa028946e8e028920a789dd9aaa768b2cc30547d5b1328f18f66a62ca6c",
     "f6f238b465d13bd79e6bb769ae566416587981b6d25e604bd85771dfbde33405",
     "3b1dacd32230dfe56c88619f8ab46b8de5c20540553899836469d7a29705ef9c",
-    "8bf99cbbe4bd7559c127d2bcbbc2646f499693f5eaa93646e735ddb01535a220"
+    "8bf99cbbe4bd7559c127d2bcbbc2646f499693f5eaa93646e735ddb01535a220",
+    "66f66373683456345660ff71812954d8f30777f3f0ab5d23bb091a8afdf4131e"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -453,7 +482,8 @@
     "522ed3e6097790a6a22465ca2ee8d2a4296cba3a27dba76e74e34ed9d3d2f5bf",
     "2451bc96c40228645059f38190f0713ade32f70ea49c62294e288bc4f9689782",
     "55e1b372a603f190e61dcef34162bc46cdbf19ad515c5400ea67469ef8472d03",
-    "c40957e4d01d5d571782c74b3ea1c88a281c2376d91c91a585d9592166fa71db"
+    "c40957e4d01d5d571782c74b3ea1c88a281c2376d91c91a585d9592166fa71db",
+    "590ec116145878a51821fbdd7b95d31d314929340b54f36d415c54e484c311af"
   ],
   "last_metrics_refresh": "2026-10-15T09:40:04.528728+00:00"
 }
