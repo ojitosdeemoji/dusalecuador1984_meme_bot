@@ -475,6 +475,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "a653245d2bf1f2c0aae609f19ffbaa08fa140cf67773e2276da00cd189ab2bd0",
+      "image_hash": "da7d1ccefef12b0d04ec489b6c65d45234ebf9d73c97050b821f8421144cdec0",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mxxggojwwd25",
+      "cid": "bafyreiapdxnljdg7yfv5ejhmczmvwtahsf4vnzzdv6g2gxvmncd7kak7gu",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mxxggojwwd25",
+      "published_at": "2026-10-16T01:29:43.585931+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HCcW6HdWMAALJMg.jpg",
+      "source_author": "joseantoniokast",
+      "source_tweet_url": "https://x.com/joseantoniokast/status/2028617959816458566",
+      "source_tweet_id": "2028617959816458566",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Ponte de pie de cara pétrea armados.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.85,
+      "approx_luminosity": 126.73,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -494,7 +522,8 @@
     "3b1dacd32230dfe56c88619f8ab46b8de5c20540553899836469d7a29705ef9c",
     "8bf99cbbe4bd7559c127d2bcbbc2646f499693f5eaa93646e735ddb01535a220",
     "66f66373683456345660ff71812954d8f30777f3f0ab5d23bb091a8afdf4131e",
-    "37d553ca589753d3ae7789c0bf17dd65df447cbaf2bf25a598bc8d105d6dbd64"
+    "37d553ca589753d3ae7789c0bf17dd65df447cbaf2bf25a598bc8d105d6dbd64",
+    "a653245d2bf1f2c0aae609f19ffbaa08fa140cf67773e2276da00cd189ab2bd0"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -513,7 +542,8 @@
     "55e1b372a603f190e61dcef34162bc46cdbf19ad515c5400ea67469ef8472d03",
     "c40957e4d01d5d571782c74b3ea1c88a281c2376d91c91a585d9592166fa71db",
     "590ec116145878a51821fbdd7b95d31d314929340b54f36d415c54e484c311af",
-    "619339ce26eb6461e219cf4da28811bb639e7ae4b157f7a52ada8049bb44b011"
+    "619339ce26eb6461e219cf4da28811bb639e7ae4b157f7a52ada8049bb44b011",
+    "da7d1ccefef12b0d04ec489b6c65d45234ebf9d73c97050b821f8421144cdec0"
   ],
   "last_metrics_refresh": "2026-10-15T09:40:04.528728+00:00"
 }
