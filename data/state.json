@@ -621,6 +621,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "342278712fdc97f00ad17f1a17e97577afd552e1e4a8b4f0e878009320dc7268",
+      "image_hash": "11513968949b9c7ace97247e7c0682e0eb04514ec7d3ce845c9c7757406d3717",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3my3tne4ucf24",
+      "cid": "bafyreieo5t4mxv5x3txrlmmaguo4sagkygnwxsdgymqr2cclrifkn4hd7u",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3my3tne4ucf24",
+      "published_at": "2026-10-17T19:36:45.144119+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HUyj6yDWkAAUBfh.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2111242587323441312",
+      "source_tweet_id": "2111242587323441312",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "El instrumento (llamado teidoatítalia) podía ser amortiguado, pero no había manera de cerrarlo del todo.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 94.97,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -645,7 +673,8 @@
     "efcc9d0e39b9541f4b3cc918f92c2ecb1bbff09e4b95cba2099b78f7243fbb5d",
     "464c7cd66b5b0c4962974d9d8add0d1e2a5c0ac3c1c6f20b70a47ce764a19047",
     "92d57f3e208a3c355626484288a4327e8da94dbd412181fcc8d5fbf5f8690484",
-    "270c11bac6c823c41876f9d8600691924414e0e8dc6716a4903b61606b591a79"
+    "270c11bac6c823c41876f9d8600691924414e0e8dc6716a4903b61606b591a79",
+    "342278712fdc97f00ad17f1a17e97577afd552e1e4a8b4f0e878009320dc7268"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -669,7 +698,8 @@
     "f5cb214eedf2870900f7b66a204c9c5870108ae0b7273e768806cda7c1033a80",
     "c50a5e58dbd6b0dc0d4ac506580f68916305fada3dbb6a521ff2c2e79c2f69fc",
     "97bcba15dc92244c719036c58c855a9cca7b10dfa94ee895070f49c6533ea7ad",
-    "e0410d7a6f0588a3f509f5012e7ea8c4dcf8acd5f862e5f8ce5f3b7a6022b645"
+    "e0410d7a6f0588a3f509f5012e7ea8c4dcf8acd5f862e5f8ce5f3b7a6022b645",
+    "11513968949b9c7ace97247e7c0682e0eb04514ec7d3ce845c9c7757406d3717"
   ],
   "last_metrics_refresh": "2026-10-17T09:04:13.933278+00:00"
 }
