@@ -680,6 +680,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-18T09:22:35.259087+00:00"
+    },
+    {
+      "phrase_hash": "0fb3b53b4365d2fbf7a54031a1d9e6cb06388767dda2d3a7b5bb9f934be0d7ef",
+      "image_hash": "efec9b9cb1c2bb529e9c05b47207882118e31905fc0781bb5080b7d3e2f73e5f",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3my5u43nnr524",
+      "cid": "bafyreihfjza3kf73l3uy52bm4l5tjjmr5nn62ymcsd2rcqxypkxxwszzne",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3my5u43nnr524",
+      "published_at": "2026-10-18T14:50:19.202671+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HUyj6yHXgAAxUBL.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2111242587323441312",
+      "source_tweet_id": "2111242587323441312",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Winston fue hacia la ventana: una figura pequeña y frágil cuya delgadez resultaba realzada por el «m ono» azul, uniforme del Partido.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 56.82,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -706,7 +734,8 @@
     "92d57f3e208a3c355626484288a4327e8da94dbd412181fcc8d5fbf5f8690484",
     "270c11bac6c823c41876f9d8600691924414e0e8dc6716a4903b61606b591a79",
     "342278712fdc97f00ad17f1a17e97577afd552e1e4a8b4f0e878009320dc7268",
-    "f0b74e59329ee53c142870f42314d4429833fc8476b53916b1657f52629e7ddf"
+    "f0b74e59329ee53c142870f42314d4429833fc8476b53916b1657f52629e7ddf",
+    "0fb3b53b4365d2fbf7a54031a1d9e6cb06388767dda2d3a7b5bb9f934be0d7ef"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -732,7 +761,8 @@
     "97bcba15dc92244c719036c58c855a9cca7b10dfa94ee895070f49c6533ea7ad",
     "e0410d7a6f0588a3f509f5012e7ea8c4dcf8acd5f862e5f8ce5f3b7a6022b645",
     "11513968949b9c7ace97247e7c0682e0eb04514ec7d3ce845c9c7757406d3717",
-    "2667ef093ea01c738f8343da6fff9936a641bfbdc2ab827f1b7a18864324cb9d"
+    "2667ef093ea01c738f8343da6fff9936a641bfbdc2ab827f1b7a18864324cb9d",
+    "efec9b9cb1c2bb529e9c05b47207882118e31905fc0781bb5080b7d3e2f73e5f"
   ],
   "last_metrics_refresh": "2026-10-18T09:22:35.259087+00:00"
 }
