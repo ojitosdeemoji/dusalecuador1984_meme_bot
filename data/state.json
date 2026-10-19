@@ -767,6 +767,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-19T10:34:53.993341+00:00"
+    },
+    {
+      "phrase_hash": "3d7867cd2de34707dd7abb410500327558303c63b5a5ce4244682c918be3212a",
+      "image_hash": "bde8c6bdba478f201b1dc981364cf29bb503fc94c12dff055038e577ddcc5bee",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myaoihhxzs2l",
+      "cid": "bafyreidbkumrjmz42akkl4lvojxph5hhujxnnwqhb7x7h6fyeuxw5q5kz4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myaoihhxzs2l",
+      "published_at": "2026-10-19T17:47:51.015605+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HU_zc6iW0AAhe7G.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2112174449525198973",
+      "source_tweet_id": "2112174449525198973",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "La cara de los bigotes negros miraba desde todas las esquinas que dominaban la circulación.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 96.22,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -796,7 +824,8 @@
     "f0b74e59329ee53c142870f42314d4429833fc8476b53916b1657f52629e7ddf",
     "0fb3b53b4365d2fbf7a54031a1d9e6cb06388767dda2d3a7b5bb9f934be0d7ef",
     "d63b4bde5508166da3af0a42b2e76cd9a3edfde6e9ee8e24542aedd8b4e8de30",
-    "fb0e7a7adeb3ac059dfe9572bc99497bea33c2368c90c76d45ddd96108937b2f"
+    "fb0e7a7adeb3ac059dfe9572bc99497bea33c2368c90c76d45ddd96108937b2f",
+    "3d7867cd2de34707dd7abb410500327558303c63b5a5ce4244682c918be3212a"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -825,7 +854,8 @@
     "2667ef093ea01c738f8343da6fff9936a641bfbdc2ab827f1b7a18864324cb9d",
     "efec9b9cb1c2bb529e9c05b47207882118e31905fc0781bb5080b7d3e2f73e5f",
     "e8b8faf61681c85108c5b71ecd8cc033d1d24a3b9574e6da2ea2e4dc122187f2",
-    "add96360eb76deac3b892d7f300cb9841bc6eb77979cfee8c90bd67f87c2f561"
+    "add96360eb76deac3b892d7f300cb9841bc6eb77979cfee8c90bd67f87c2f561",
+    "bde8c6bdba478f201b1dc981364cf29bb503fc94c12dff055038e577ddcc5bee"
   ],
   "last_metrics_refresh": "2026-10-19T10:34:53.993341+00:00"
 }
