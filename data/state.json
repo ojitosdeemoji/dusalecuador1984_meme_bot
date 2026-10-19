@@ -736,6 +736,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "fb0e7a7adeb3ac059dfe9572bc99497bea33c2368c90c76d45ddd96108937b2f",
+      "image_hash": "add96360eb76deac3b892d7f300cb9841bc6eb77979cfee8c90bd67f87c2f561",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3my6xktxwrt26",
+      "cid": "bafyreihqxpcde3vqwqgooc7ymgfans7v5p3ik5w4sgxff7i4jskt2njcay",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3my6xktxwrt26",
+      "published_at": "2026-10-19T01:24:55.325414+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HUtBecLWAAAhTmS.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2110852847302586421",
+      "source_tweet_id": "2110852847302586421",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Afuera, incluso a través de los ventanales cerrados, el mundo parecía frío.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 123.43,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -764,7 +792,8 @@
     "342278712fdc97f00ad17f1a17e97577afd552e1e4a8b4f0e878009320dc7268",
     "f0b74e59329ee53c142870f42314d4429833fc8476b53916b1657f52629e7ddf",
     "0fb3b53b4365d2fbf7a54031a1d9e6cb06388767dda2d3a7b5bb9f934be0d7ef",
-    "d63b4bde5508166da3af0a42b2e76cd9a3edfde6e9ee8e24542aedd8b4e8de30"
+    "d63b4bde5508166da3af0a42b2e76cd9a3edfde6e9ee8e24542aedd8b4e8de30",
+    "fb0e7a7adeb3ac059dfe9572bc99497bea33c2368c90c76d45ddd96108937b2f"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -792,7 +821,8 @@
     "11513968949b9c7ace97247e7c0682e0eb04514ec7d3ce845c9c7757406d3717",
     "2667ef093ea01c738f8343da6fff9936a641bfbdc2ab827f1b7a18864324cb9d",
     "efec9b9cb1c2bb529e9c05b47207882118e31905fc0781bb5080b7d3e2f73e5f",
-    "e8b8faf61681c85108c5b71ecd8cc033d1d24a3b9574e6da2ea2e4dc122187f2"
+    "e8b8faf61681c85108c5b71ecd8cc033d1d24a3b9574e6da2ea2e4dc122187f2",
+    "add96360eb76deac3b892d7f300cb9841bc6eb77979cfee8c90bd67f87c2f561"
   ],
   "last_metrics_refresh": "2026-10-18T09:22:35.259087+00:00"
 }
