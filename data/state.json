@@ -825,6 +825,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-20T09:51:05.832010+00:00"
+    },
+    {
+      "phrase_hash": "8c823d86559fc40d85cd328d14f32f660aa814d6811c9599ca37ae4277725977",
+      "image_hash": "18bdde182d2751171f68e148a5a5a2fe1bb57a81fe53908a48676b65621cbcbd",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mycy6cnx3627",
+      "cid": "bafyreiem4ndn5nlx25zehk4oq4ni4baaovtwfbo3uswoarzcgiwvcsz76a",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mycy6cnx3627",
+      "published_at": "2026-10-20T15:46:27.402482+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HU_xtTeXwAA2sdH.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2112172661254054040",
+      "source_tweet_id": "2112172661254054040",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Tampoco hay prejuicios raciales ni dominio de una tarde al Centro.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 119.14,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -856,7 +884,8 @@
     "d63b4bde5508166da3af0a42b2e76cd9a3edfde6e9ee8e24542aedd8b4e8de30",
     "fb0e7a7adeb3ac059dfe9572bc99497bea33c2368c90c76d45ddd96108937b2f",
     "3d7867cd2de34707dd7abb410500327558303c63b5a5ce4244682c918be3212a",
-    "c490b718b38d80822b06d9170b24ec51d683f6d406271c7cc9112dea4aa840db"
+    "c490b718b38d80822b06d9170b24ec51d683f6d406271c7cc9112dea4aa840db",
+    "8c823d86559fc40d85cd328d14f32f660aa814d6811c9599ca37ae4277725977"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -887,7 +916,8 @@
     "e8b8faf61681c85108c5b71ecd8cc033d1d24a3b9574e6da2ea2e4dc122187f2",
     "add96360eb76deac3b892d7f300cb9841bc6eb77979cfee8c90bd67f87c2f561",
     "bde8c6bdba478f201b1dc981364cf29bb503fc94c12dff055038e577ddcc5bee",
-    "585df0f72f021f3c3de7f3cf40580a3c15f537504c2d74c1a1a62096a77e1f6f"
+    "585df0f72f021f3c3de7f3cf40580a3c15f537504c2d74c1a1a62096a77e1f6f",
+    "18bdde182d2751171f68e148a5a5a2fe1bb57a81fe53908a48676b65621cbcbd"
   ],
   "last_metrics_refresh": "2026-10-20T09:51:05.832010+00:00"
 }
