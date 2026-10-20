@@ -853,6 +853,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "77c3e2151f068bd7a566804da36024b0eb1f9b49e04b99b021b574759afcdc20",
+      "image_hash": "06d4ea64236e1257d373b141f4ced7c0bd07843aa18bbab0c39d891f0018d47b",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mydiqzg4og2w",
+      "cid": "bafyreiatlt5bfyg7hmrrymmh3tjd4cvztoseun53j2pw2uqqagr7nultou",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mydiqzg4og2w",
+      "published_at": "2026-10-20T20:43:14.967474+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVFoVugWMAAZf0m.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2112584431974092864",
+      "source_tweet_id": "2112584431974092864",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 1: Exploración Pura",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "El cielo estaba tan azul, entre las ch imeneas,.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 147.98,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -885,7 +913,8 @@
     "fb0e7a7adeb3ac059dfe9572bc99497bea33c2368c90c76d45ddd96108937b2f",
     "3d7867cd2de34707dd7abb410500327558303c63b5a5ce4244682c918be3212a",
     "c490b718b38d80822b06d9170b24ec51d683f6d406271c7cc9112dea4aa840db",
-    "8c823d86559fc40d85cd328d14f32f660aa814d6811c9599ca37ae4277725977"
+    "8c823d86559fc40d85cd328d14f32f660aa814d6811c9599ca37ae4277725977",
+    "77c3e2151f068bd7a566804da36024b0eb1f9b49e04b99b021b574759afcdc20"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -917,7 +946,8 @@
     "add96360eb76deac3b892d7f300cb9841bc6eb77979cfee8c90bd67f87c2f561",
     "bde8c6bdba478f201b1dc981364cf29bb503fc94c12dff055038e577ddcc5bee",
     "585df0f72f021f3c3de7f3cf40580a3c15f537504c2d74c1a1a62096a77e1f6f",
-    "18bdde182d2751171f68e148a5a5a2fe1bb57a81fe53908a48676b65621cbcbd"
+    "18bdde182d2751171f68e148a5a5a2fe1bb57a81fe53908a48676b65621cbcbd",
+    "06d4ea64236e1257d373b141f4ced7c0bd07843aa18bbab0c39d891f0018d47b"
   ],
   "last_metrics_refresh": "2026-10-20T09:51:05.832010+00:00"
 }
