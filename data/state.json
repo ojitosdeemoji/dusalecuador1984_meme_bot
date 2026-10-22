@@ -999,6 +999,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-22T09:53:33.243926+00:00"
+    },
+    {
+      "phrase_hash": "05d6993203005429094762f4aa5205d0896e7bc53df4520a57df83f694f390c5",
+      "image_hash": "830227834f774b4d0062f78c7783e0501a70097eb1ebd3f3fde255af14faf3fd",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myi2c3b5bi2a",
+      "cid": "bafyreidouf4pab7kbzdiz25y2gjgk6v2rkhvqwb3b3pwmrabgozpyjikf4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myi2c3b5bi2a",
+      "published_at": "2026-10-22T16:07:39.920899+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVPIjw-XwAAwqmU.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113253472577409327",
+      "source_tweet_id": "2113253472577409327",
+      "fallback_activated": false,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Era de la patrulla de policía encargada de vigilar a la gente a través de los balcon es y ventanas.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 109.08,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1036,7 +1064,8 @@
     "9e47b0001acc12ce5d1762dbb50bada8404fc8bc0ced0066530738cbfceb63e3",
     "d324852f9fcb5196d2b6617b2a9e6ecdc18ea0e53ab71899f454ddc7a2e47a28",
     "0e71c7b934f654bd36f670620a5b3c5926c68f79fce31d81f5469c506e346a3c",
-    "7f29407986f1d58b0854f546f9d9b979c161a060cd0cc3286036a91eb39309d3"
+    "7f29407986f1d58b0854f546f9d9b979c161a060cd0cc3286036a91eb39309d3",
+    "05d6993203005429094762f4aa5205d0896e7bc53df4520a57df83f694f390c5"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1073,7 +1102,8 @@
     "4b9aadd532912fadda1843454fa6d0d5243baad49609f27a30215b5a158b1927",
     "7a4d2b18aa05500fcbd1e77fe21427623b288ed4f0ecea76bc6e9891515206b7",
     "43b223c27d231544ed3a8bdd939e9ee7fbef98c97e0e8b9ee9e423a943752588",
-    "c7a787643203f03a653d2974189e84562cf590e45c0f0a25e9e7939e46e4fb79"
+    "c7a787643203f03a653d2974189e84562cf590e45c0f0a25e9e7939e46e4fb79",
+    "830227834f774b4d0062f78c7783e0501a70097eb1ebd3f3fde255af14faf3fd"
   ],
   "last_metrics_refresh": "2026-10-22T09:53:33.243926+00:00"
 }
