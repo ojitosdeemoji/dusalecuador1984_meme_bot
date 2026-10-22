@@ -1027,6 +1027,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "8fcef293bc91fee5c407974b5e9ba93540ca96bb98a49a4473f03fa76f91f7a4",
+      "image_hash": "41f037fa214330f90d9bdfbdd4604262b3c9dbf2fca632091f501ecdf0a5e20e",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myijwlsgz32n",
+      "cid": "bafyreigp53onxzblrogsvh3l6f3jrohhpoajrosfp6d67vuonm3g5zchpq",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myijwlsgz32n",
+      "published_at": "2026-10-22T20:47:34.504372+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVQLH_kX0AAGhBN.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113326363851563456",
+      "source_tweet_id": "2113326363851563456",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Sin embargo, las patrullas eran lo de menos.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 134.89,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1065,7 +1093,8 @@
     "d324852f9fcb5196d2b6617b2a9e6ecdc18ea0e53ab71899f454ddc7a2e47a28",
     "0e71c7b934f654bd36f670620a5b3c5926c68f79fce31d81f5469c506e346a3c",
     "7f29407986f1d58b0854f546f9d9b979c161a060cd0cc3286036a91eb39309d3",
-    "05d6993203005429094762f4aa5205d0896e7bc53df4520a57df83f694f390c5"
+    "05d6993203005429094762f4aa5205d0896e7bc53df4520a57df83f694f390c5",
+    "8fcef293bc91fee5c407974b5e9ba93540ca96bb98a49a4473f03fa76f91f7a4"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1103,7 +1132,8 @@
     "7a4d2b18aa05500fcbd1e77fe21427623b288ed4f0ecea76bc6e9891515206b7",
     "43b223c27d231544ed3a8bdd939e9ee7fbef98c97e0e8b9ee9e423a943752588",
     "c7a787643203f03a653d2974189e84562cf590e45c0f0a25e9e7939e46e4fb79",
-    "830227834f774b4d0062f78c7783e0501a70097eb1ebd3f3fde255af14faf3fd"
+    "830227834f774b4d0062f78c7783e0501a70097eb1ebd3f3fde255af14faf3fd",
+    "41f037fa214330f90d9bdfbdd4604262b3c9dbf2fca632091f501ecdf0a5e20e"
   ],
   "last_metrics_refresh": "2026-10-22T09:53:33.243926+00:00"
 }
