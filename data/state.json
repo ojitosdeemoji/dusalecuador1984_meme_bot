@@ -1114,6 +1114,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "712c504691538632fdb6ac525278136b4356b53a7113f0b208474afd3ec739ad",
+      "image_hash": "6b2986e96c273c494e6c6b26379d1ec38eb5c0c236a59eb3b4e0c10aafd532fa",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mykzjgz4yr2q",
+      "cid": "bafyreicn3gona3cccrrqgtvg4ojprp5tsnkp2ny2ax2uu5yej7kcwhrz5m",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mykzjgz4yr2q",
+      "published_at": "2026-10-23T20:31:52.591164+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVRww9IW0AE3kPP.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113438122562183557",
+      "source_tweet_id": "2113438122562183557",
+      "fallback_activated": false,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "La telepantalla recibía y transmitía simultáneamente.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 36.66,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1155,7 +1183,8 @@
     "05d6993203005429094762f4aa5205d0896e7bc53df4520a57df83f694f390c5",
     "8fcef293bc91fee5c407974b5e9ba93540ca96bb98a49a4473f03fa76f91f7a4",
     "4b439da72eb142ee1b36e1f7f36cbf1d5243beebe2bf4cb290fd710cb366b78d",
-    "44f888f6403290f5ac42761ae7a39488764a7cb9d90dc836f9fae446de80917a"
+    "44f888f6403290f5ac42761ae7a39488764a7cb9d90dc836f9fae446de80917a",
+    "712c504691538632fdb6ac525278136b4356b53a7113f0b208474afd3ec739ad"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1196,7 +1225,8 @@
     "830227834f774b4d0062f78c7783e0501a70097eb1ebd3f3fde255af14faf3fd",
     "41f037fa214330f90d9bdfbdd4604262b3c9dbf2fca632091f501ecdf0a5e20e",
     "a840f8e9a56447a202d5b7bbb4fb970c6a1322652a5c292164f00897e23b5b15",
-    "a89974b751bbbd88118cfc96cfb18fb3c259064f223cda69a5988688549c5517"
+    "a89974b751bbbd88118cfc96cfb18fb3c259064f223cda69a5988688549c5517",
+    "6b2986e96c273c494e6c6b26379d1ec38eb5c0c236a59eb3b4e0c10aafd532fa"
   ],
   "last_metrics_refresh": "2026-10-23T09:47:11.096271+00:00"
 }
