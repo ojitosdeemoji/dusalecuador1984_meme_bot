@@ -1086,6 +1086,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-23T09:47:11.096271+00:00"
+    },
+    {
+      "phrase_hash": "44f888f6403290f5ac42761ae7a39488764a7cb9d90dc836f9fae446de80917a",
+      "image_hash": "a89974b751bbbd88118cfc96cfb18fb3c259064f223cda69a5988688549c5517",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mykk2ynpw62a",
+      "cid": "bafyreieuwhjlaumhtwywtkqiaijfp63fiags7dc3lhq3ddnovhrrey4p6q",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mykk2ynpw62a",
+      "published_at": "2026-10-23T15:55:22.480830+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVRww9SWwAA3Gbv.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113438122562183557",
+      "source_tweet_id": "2113438122562183557",
+      "fallback_activated": false,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Lo que importaba verdaderamente era la Policía del Pensamiento.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 30.13,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1126,7 +1154,8 @@
     "7f29407986f1d58b0854f546f9d9b979c161a060cd0cc3286036a91eb39309d3",
     "05d6993203005429094762f4aa5205d0896e7bc53df4520a57df83f694f390c5",
     "8fcef293bc91fee5c407974b5e9ba93540ca96bb98a49a4473f03fa76f91f7a4",
-    "4b439da72eb142ee1b36e1f7f36cbf1d5243beebe2bf4cb290fd710cb366b78d"
+    "4b439da72eb142ee1b36e1f7f36cbf1d5243beebe2bf4cb290fd710cb366b78d",
+    "44f888f6403290f5ac42761ae7a39488764a7cb9d90dc836f9fae446de80917a"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1166,7 +1195,8 @@
     "c7a787643203f03a653d2974189e84562cf590e45c0f0a25e9e7939e46e4fb79",
     "830227834f774b4d0062f78c7783e0501a70097eb1ebd3f3fde255af14faf3fd",
     "41f037fa214330f90d9bdfbdd4604262b3c9dbf2fca632091f501ecdf0a5e20e",
-    "a840f8e9a56447a202d5b7bbb4fb970c6a1322652a5c292164f00897e23b5b15"
+    "a840f8e9a56447a202d5b7bbb4fb970c6a1322652a5c292164f00897e23b5b15",
+    "a89974b751bbbd88118cfc96cfb18fb3c259064f223cda69a5988688549c5517"
   ],
   "last_metrics_refresh": "2026-10-23T09:47:11.096271+00:00"
 }
