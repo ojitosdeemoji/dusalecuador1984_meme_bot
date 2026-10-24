@@ -1173,6 +1173,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-24T09:20:30.303820+00:00"
+    },
+    {
+      "phrase_hash": "77780703dbdc3a833e043d6af19631cb827ec4b2fb8ede9bbc87dbc7a65390e9",
+      "image_hash": "63fa4bff59a68b8e7c7b12b3f793cd5277fefcf6c7dff5e46c0d6958fd64f6a0",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mymwzl2vfu2a",
+      "cid": "bafyreifntwqzq6jtawitjfpywbtyuokux22mqgzs55rrhug2duywp5dw6a",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mymwzl2vfu2a",
+      "published_at": "2026-10-24T14:52:31.935880+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVRU47pWYAAzUCC.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113407472375619687",
+      "source_tweet_id": "2113407472375619687",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "No importa, porque hay mucha circulación.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 107.7,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1216,7 +1244,8 @@
     "4b439da72eb142ee1b36e1f7f36cbf1d5243beebe2bf4cb290fd710cb366b78d",
     "44f888f6403290f5ac42761ae7a39488764a7cb9d90dc836f9fae446de80917a",
     "712c504691538632fdb6ac525278136b4356b53a7113f0b208474afd3ec739ad",
-    "09ba9beb5263827511826c7837daaffc9ec79e80b43bacbe5a6516d6cde173ae"
+    "09ba9beb5263827511826c7837daaffc9ec79e80b43bacbe5a6516d6cde173ae",
+    "77780703dbdc3a833e043d6af19631cb827ec4b2fb8ede9bbc87dbc7a65390e9"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1259,7 +1288,8 @@
     "a840f8e9a56447a202d5b7bbb4fb970c6a1322652a5c292164f00897e23b5b15",
     "a89974b751bbbd88118cfc96cfb18fb3c259064f223cda69a5988688549c5517",
     "6b2986e96c273c494e6c6b26379d1ec38eb5c0c236a59eb3b4e0c10aafd532fa",
-    "c9812a25b2fb641de8e1962179538e3b2c85b5cfe5cf066d7801ac36723c2953"
+    "c9812a25b2fb641de8e1962179538e3b2c85b5cfe5cf066d7801ac36723c2953",
+    "63fa4bff59a68b8e7c7b12b3f793cd5277fefcf6c7dff5e46c0d6958fd64f6a0"
   ],
   "last_metrics_refresh": "2026-10-24T09:20:30.303820+00:00"
 }
