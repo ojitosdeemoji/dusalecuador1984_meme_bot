@@ -1260,6 +1260,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-25T09:37:25.022469+00:00"
+    },
+    {
+      "phrase_hash": "b68d62f272bbb59419480ff2ed87767e6322e2537000ce996619ae19c31a30d4",
+      "image_hash": "1a7d808db144ca87e6448ee37677aa42ec9c1135eae081b265a1b192c9b43edc",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mypicgvueh2a",
+      "cid": "bafyreihxoyoiwhjsmxtgeoi4nd4nu7pz356qfxf3jr23zrqkhzvr4yl7py",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mypicgvueh2a",
+      "published_at": "2026-10-25T15:07:03.271574+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVQLH_kXQAAZ-Nm.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113326363851563456",
+      "source_tweet_id": "2113326363851563456",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Pero lo mejor tienes que llevarm e.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 171.94,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1306,7 +1334,8 @@
     "09ba9beb5263827511826c7837daaffc9ec79e80b43bacbe5a6516d6cde173ae",
     "77780703dbdc3a833e043d6af19631cb827ec4b2fb8ede9bbc87dbc7a65390e9",
     "c5c84b95061c21843a8b781e0f7c3bdad34ef74705a767bf794d3d5b62528ddd",
-    "72ecefd891b0bc8cffd6f8d8f0c7b5f4c7d862a5abf3822e05d8cf2950b07b6f"
+    "72ecefd891b0bc8cffd6f8d8f0c7b5f4c7d862a5abf3822e05d8cf2950b07b6f",
+    "b68d62f272bbb59419480ff2ed87767e6322e2537000ce996619ae19c31a30d4"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1352,7 +1381,8 @@
     "c9812a25b2fb641de8e1962179538e3b2c85b5cfe5cf066d7801ac36723c2953",
     "63fa4bff59a68b8e7c7b12b3f793cd5277fefcf6c7dff5e46c0d6958fd64f6a0",
     "4c19d0b625e543dec39b078c58b75e711eea0c1da7964d002086fade97fcd23c",
-    "d58e079143045593b0205399885a64cd3ba03c6a8545500ea36453ecb540ec69"
+    "d58e079143045593b0205399885a64cd3ba03c6a8545500ea36453ecb540ec69",
+    "1a7d808db144ca87e6448ee37677aa42ec9c1135eae081b265a1b192c9b43edc"
   ],
   "last_metrics_refresh": "2026-10-25T09:37:25.022469+00:00"
 }
