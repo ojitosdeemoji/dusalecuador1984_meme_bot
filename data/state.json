@@ -1347,6 +1347,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-26T10:49:27.256562+00:00"
+    },
+    {
+      "phrase_hash": "6eb7422e1765548a4ed2d1a54ea565ada00ff826a8a443f83a38d97768d54a37",
+      "image_hash": "ecac7dcf408d21da09f10120b4a48e62b90679d4d11c85b4d5934f594aab235f",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mysbfwwx7d2t",
+      "cid": "bafyreiefxrw2vvxscee3vvphxyd342c7yyuqg375kum6eku7o6bjcdvffq",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mysbfwwx7d2t",
+      "published_at": "2026-10-26T17:41:43.114074+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVPIrdWXYAAKzwI.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2113253472577409327",
+      "source_tweet_id": "2113253472577409327",
+      "fallback_activated": false,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Por alguna razón, Wins ton las miró con asco.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 119.31,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1396,7 +1424,8 @@
     "72ecefd891b0bc8cffd6f8d8f0c7b5f4c7d862a5abf3822e05d8cf2950b07b6f",
     "b68d62f272bbb59419480ff2ed87767e6322e2537000ce996619ae19c31a30d4",
     "9599c87508b1f0f5cb0247b26f370a4836aefbea800bb27dfc67cdff233eeb55",
-    "fbb9d88fffebacc04ae90dd4fbe689ce79bfb3f8ea9cbc5704893357b8a02037"
+    "fbb9d88fffebacc04ae90dd4fbe689ce79bfb3f8ea9cbc5704893357b8a02037",
+    "6eb7422e1765548a4ed2d1a54ea565ada00ff826a8a443f83a38d97768d54a37"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1445,7 +1474,8 @@
     "d58e079143045593b0205399885a64cd3ba03c6a8545500ea36453ecb540ec69",
     "1a7d808db144ca87e6448ee37677aa42ec9c1135eae081b265a1b192c9b43edc",
     "fe3fe95676702e63937eb2f89484089ce7f2ea76ee29d713690d7265a89924be",
-    "d31bd90472bcee48c39f12092bee433ef15484199a2c323e73ac7d8c14336d2d"
+    "d31bd90472bcee48c39f12092bee433ef15484199a2c323e73ac7d8c14336d2d",
+    "ecac7dcf408d21da09f10120b4a48e62b90679d4d11c85b4d5934f594aab235f"
   ],
   "last_metrics_refresh": "2026-10-26T10:49:27.256562+00:00"
 }
