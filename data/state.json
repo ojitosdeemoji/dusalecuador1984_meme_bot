@@ -1375,6 +1375,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "6734e1cca954a6f9c13e2383595d36d23afa012b72f1523b509977133c174a34",
+      "image_hash": "4cb40984f0041d3d2b44f62d7d734025d9aca84204ee0bbeaf5e4fb6961b6956",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myt6cxb6ta2l",
+      "cid": "bafyreiekxicksyqztmzyiwsnnjns6t2y7clsw5iqndyj2hm2f6xfn7pfuy",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myt6cxb6ta2l",
+      "published_at": "2026-10-27T02:19:02.554664+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVloFWlWkAAZwOG.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2114835958902456353",
+      "source_tweet_id": "2114835958902456353",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Desde luego, Winston no tuvo ni.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 188.05,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1425,7 +1453,8 @@
     "b68d62f272bbb59419480ff2ed87767e6322e2537000ce996619ae19c31a30d4",
     "9599c87508b1f0f5cb0247b26f370a4836aefbea800bb27dfc67cdff233eeb55",
     "fbb9d88fffebacc04ae90dd4fbe689ce79bfb3f8ea9cbc5704893357b8a02037",
-    "6eb7422e1765548a4ed2d1a54ea565ada00ff826a8a443f83a38d97768d54a37"
+    "6eb7422e1765548a4ed2d1a54ea565ada00ff826a8a443f83a38d97768d54a37",
+    "6734e1cca954a6f9c13e2383595d36d23afa012b72f1523b509977133c174a34"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1475,7 +1504,8 @@
     "1a7d808db144ca87e6448ee37677aa42ec9c1135eae081b265a1b192c9b43edc",
     "fe3fe95676702e63937eb2f89484089ce7f2ea76ee29d713690d7265a89924be",
     "d31bd90472bcee48c39f12092bee433ef15484199a2c323e73ac7d8c14336d2d",
-    "ecac7dcf408d21da09f10120b4a48e62b90679d4d11c85b4d5934f594aab235f"
+    "ecac7dcf408d21da09f10120b4a48e62b90679d4d11c85b4d5934f594aab235f",
+    "4cb40984f0041d3d2b44f62d7d734025d9aca84204ee0bbeaf5e4fb6961b6956"
   ],
   "last_metrics_refresh": "2026-10-26T10:49:27.256562+00:00"
 }
