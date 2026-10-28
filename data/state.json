@@ -1520,6 +1520,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "05561764994213e6f76193cad6bc83923a827ecc3b6e1a5269544f1daa47c60f",
+      "image_hash": "9bf7c037abe50071f21c655f3768aed745bd2305b02ede6b9cd9b4b58774eee5",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myxq4e4dpv2l",
+      "cid": "bafyreih3ykdyq25ccxbbrfqjpoknd3ujxrd6rk3mkfgwkup5dtz6vmynvu",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myxq4e4dpv2l",
+      "published_at": "2026-10-28T21:48:06.301956+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVvH8BHWEAEt4FM.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2115504420519846264",
+      "source_tweet_id": "2115504420519846264",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Lo único posible era figurarse la frecuencia y el plan que empleaba la Policía del Pensamiento para controlar un hilo privado.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 63.39,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1575,7 +1603,8 @@
     "2571d8481d6693276262ef6023403e8a74885485eaf8fd9abafe6a929390cf56",
     "15a5cbb0594bca8a9b897cfb8fda260069d3a3ea3cc7c11efe4cb8524ea62623",
     "92e6d232c65edb209c18405b8834fad11f9babf3c37458cf61854d2c562b178e",
-    "41f039d526d106388be8cf6a61e6fbeadfdbb6c7786ea5ddf33f35f2549f170b"
+    "41f039d526d106388be8cf6a61e6fbeadfdbb6c7786ea5ddf33f35f2549f170b",
+    "05561764994213e6f76193cad6bc83923a827ecc3b6e1a5269544f1daa47c60f"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1630,7 +1659,8 @@
     "a1cfbf2dfa7304594f11444e209b6cffdedf168bcef54100623ae8d1419146b9",
     "af55fa755b8131fe461d3f000b542ddf2ae4110d61cb512a52b0d700950a6059",
     "cde2a091442c33642b2d0e2575eb7b00c23c1c54ed2f4ea43e20c38822def2a1",
-    "c2e4af57a22fa3d6ceeaae7d25d6fc5ff662bf6fbb8e41a86ad98778ab1d653c"
+    "c2e4af57a22fa3d6ceeaae7d25d6fc5ff662bf6fbb8e41a86ad98778ab1d653c",
+    "9bf7c037abe50071f21c655f3768aed745bd2305b02ede6b9cd9b4b58774eee5"
   ],
   "last_metrics_refresh": "2026-10-28T11:05:21.220353+00:00"
 }
