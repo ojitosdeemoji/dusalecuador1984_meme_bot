@@ -1461,6 +1461,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "92e6d232c65edb209c18405b8834fad11f9babf3c37458cf61854d2c562b178e",
+      "image_hash": "cde2a091442c33642b2d0e2575eb7b00c23c1c54ed2f4ea43e20c38822def2a1",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myvoztitn62f",
+      "cid": "bafyreigc56qdq4tanfnsrwafe3cw3qqr2wfx6hxvlfzgljhu7kmxmxmw7u",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myvoztitn62f",
+      "published_at": "2026-10-28T02:23:28.836058+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVqMqFPW8AAA6Rt.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2115157637121679608",
+      "source_tweet_id": "2115157637121679608",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "El Gran Hermano es la misma.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 108.9,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1514,7 +1542,8 @@
     "6eb7422e1765548a4ed2d1a54ea565ada00ff826a8a443f83a38d97768d54a37",
     "6734e1cca954a6f9c13e2383595d36d23afa012b72f1523b509977133c174a34",
     "2571d8481d6693276262ef6023403e8a74885485eaf8fd9abafe6a929390cf56",
-    "15a5cbb0594bca8a9b897cfb8fda260069d3a3ea3cc7c11efe4cb8524ea62623"
+    "15a5cbb0594bca8a9b897cfb8fda260069d3a3ea3cc7c11efe4cb8524ea62623",
+    "92e6d232c65edb209c18405b8834fad11f9babf3c37458cf61854d2c562b178e"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1567,7 +1596,8 @@
     "ecac7dcf408d21da09f10120b4a48e62b90679d4d11c85b4d5934f594aab235f",
     "4cb40984f0041d3d2b44f62d7d734025d9aca84204ee0bbeaf5e4fb6961b6956",
     "a1cfbf2dfa7304594f11444e209b6cffdedf168bcef54100623ae8d1419146b9",
-    "af55fa755b8131fe461d3f000b542ddf2ae4110d61cb512a52b0d700950a6059"
+    "af55fa755b8131fe461d3f000b542ddf2ae4110d61cb512a52b0d700950a6059",
+    "cde2a091442c33642b2d0e2575eb7b00c23c1c54ed2f4ea43e20c38822def2a1"
   ],
   "last_metrics_refresh": "2026-10-27T10:15:35.252027+00:00"
 }
