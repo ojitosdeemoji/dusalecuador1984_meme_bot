@@ -1579,6 +1579,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-29T11:21:24.511878+00:00"
+    },
+    {
+      "phrase_hash": "25ab2c1234c8c4309e3c14b8b58b6cb08f6d3242beb42b41baf8d6b3ff50bce7",
+      "image_hash": "98bf90daf5674e250bfcf51c75c57948b6f5ea4fad600df4953bca27f115a018",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3myzsibcxst2a",
+      "cid": "bafyreidz2d7mrqlpagqfx5j5bzpieqe2cu7pf242broqaf3fwpnbyhqncm",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3myzsibcxst2a",
+      "published_at": "2026-10-29T17:35:53.477249+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVzDY0zXIAAbx9W.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2115780769146896621",
+      "source_tweet_id": "2115780769146896621",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Creía por ejemplo —porque lo había visto.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 135.4,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1636,7 +1664,8 @@
     "92e6d232c65edb209c18405b8834fad11f9babf3c37458cf61854d2c562b178e",
     "41f039d526d106388be8cf6a61e6fbeadfdbb6c7786ea5ddf33f35f2549f170b",
     "05561764994213e6f76193cad6bc83923a827ecc3b6e1a5269544f1daa47c60f",
-    "3719ebd77c504704a1e82cbe81fdeac905d7aa96bb978a3518bcfac1014fe205"
+    "3719ebd77c504704a1e82cbe81fdeac905d7aa96bb978a3518bcfac1014fe205",
+    "25ab2c1234c8c4309e3c14b8b58b6cb08f6d3242beb42b41baf8d6b3ff50bce7"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1693,7 +1722,8 @@
     "cde2a091442c33642b2d0e2575eb7b00c23c1c54ed2f4ea43e20c38822def2a1",
     "c2e4af57a22fa3d6ceeaae7d25d6fc5ff662bf6fbb8e41a86ad98778ab1d653c",
     "9bf7c037abe50071f21c655f3768aed745bd2305b02ede6b9cd9b4b58774eee5",
-    "31ed83f19116ca0ff206702c66d8b1886be9ac1721ae7192b59c695fb73498d3"
+    "31ed83f19116ca0ff206702c66d8b1886be9ac1721ae7192b59c695fb73498d3",
+    "98bf90daf5674e250bfcf51c75c57948b6f5ea4fad600df4953bca27f115a018"
   ],
   "last_metrics_refresh": "2026-10-29T11:21:24.511878+00:00"
 }
