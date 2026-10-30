@@ -1637,6 +1637,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-10-30T11:13:42.258444+00:00"
+    },
+    {
+      "phrase_hash": "550a356a3ca07cb9fd0bafa2b8e013a7d10c5680e3270fe67275aca78ffb0829",
+      "image_hash": "e1766d9aa2df2b772891832d7db3ae6dfd5cac046cf4db8e0f8132e0bea98946",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mz4biebvts2a",
+      "cid": "bafyreiaizmmpxxb4ggzccglpfzwe7tfgq7ow2wapl53nmzsr66bnn7iabm",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mz4biebvts2a",
+      "published_at": "2026-10-30T17:09:41.825158+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HV0UeKyW8AAzuSo.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2115869951747883319",
+      "source_tweet_id": "2115869951747883319",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Syme levantó la vista: —Aquí viene.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 88.81,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1696,7 +1724,8 @@
     "05561764994213e6f76193cad6bc83923a827ecc3b6e1a5269544f1daa47c60f",
     "3719ebd77c504704a1e82cbe81fdeac905d7aa96bb978a3518bcfac1014fe205",
     "25ab2c1234c8c4309e3c14b8b58b6cb08f6d3242beb42b41baf8d6b3ff50bce7",
-    "357d9b56d664f15d832a1b0c5920a13edf94816f81f0aba3c53668fc06a621dd"
+    "357d9b56d664f15d832a1b0c5920a13edf94816f81f0aba3c53668fc06a621dd",
+    "550a356a3ca07cb9fd0bafa2b8e013a7d10c5680e3270fe67275aca78ffb0829"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1755,7 +1784,8 @@
     "9bf7c037abe50071f21c655f3768aed745bd2305b02ede6b9cd9b4b58774eee5",
     "31ed83f19116ca0ff206702c66d8b1886be9ac1721ae7192b59c695fb73498d3",
     "98bf90daf5674e250bfcf51c75c57948b6f5ea4fad600df4953bca27f115a018",
-    "c8b530aaad3462412cf325d3dba0bbc9703210bb1e9f1f735157164f03e9543b"
+    "c8b530aaad3462412cf325d3dba0bbc9703210bb1e9f1f735157164f03e9543b",
+    "e1766d9aa2df2b772891832d7db3ae6dfd5cac046cf4db8e0f8132e0bea98946"
   ],
   "last_metrics_refresh": "2026-10-30T11:13:42.258444+00:00"
 }
