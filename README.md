@@ -1,4 +1,4 @@
-# 🎭 dusalecuador1984_meme_bot: Generador Autónomo de Cadáver Exquisito Digital
+# 🎭 dusalecuador1984_meme_bot: Generador autónomo de collage/meme digital
 
 [![Publicar Meme](https://github.com/ojitosdeemoji/dusalecuador1984_meme_bot/actions/workflows/publish.yml/badge.svg)](https://github.com/ojitosdeemoji/dusalecuador1984_meme_bot/actions/workflows/publish.yml)
 [![Recopilar Métricas](https://github.com/ojitosdeemoji/dusalecuador1984_meme_bot/actions/workflows/metrics.yml/badge.svg)](https://github.com/ojitosdeemoji/dusalecuador1984_meme_bot/actions/workflows/metrics.yml)
@@ -7,9 +7,9 @@
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![Bluesky](https://img.shields.io/badge/Bluesky-AT%20Protocol-0085ff.svg)](https://bsky.app)
 
-**dusalecuador1984_meme_bot** es un agente cibernético autónomo diseñado para generar, componer y publicar obras de arte medial inspiradas en el principio surrealista del **cadáver exquisito** y en la distopía política contemporánea. 
+**dusalecuador1984_meme_bot** es un agente cibernético autónomo diseñado para generar, componer y publicar memes.
 
-La obra fusiona fragmentos del texto clásico *1984* de George Orwell (sintetizados mediante Cadenas de Markov) con imágenes institucionales extraídas automáticamente vía *web scraping* desde las redes oficiales del Ejecutivo y Ministerios. Todo el proceso es ejecutado de forma autónoma por un bot en **Bluesky**, actuando como un experimento sobre la autoría, el vaciado legal, la persecución estatal contra la cultura memética y la libertad de expresión en la esfera digital.
+La obra fusiona fragmentos del texto clásico *1984* de George Orwell (sintetizados mediante Cadenas de Markov) con imágenes institucionales extraídas automáticamente vía *web scraping* desde las redes oficiales del Ejecutivo y Ministerios. Todo el proceso es ejecutado de forma autónoma por un bot en **Bluesky**, actuando como un experimento sobre la autoría, el vacio legal, la persecución estatal contra la cultura memética y la libertad de expresión en la esfera digital.
 
 ---
 
