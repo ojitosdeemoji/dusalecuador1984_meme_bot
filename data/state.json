@@ -1811,6 +1811,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-01T11:44:03.926639+00:00"
+    },
+    {
+      "phrase_hash": "b298abf79236fe484d126a5c220273b918ab7063cc8c1f077e6a6767a944a9cb",
+      "image_hash": "3aff68a9480191f350140f15adf7006a9baf8b01469c96f693b3700041fc16c9",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzbdbv3mxk2j",
+      "cid": "bafyreicri2ocpjfpjrkxbcbdgfaepozo2mkpzu7kitfwm7iwgxy5wl45wa",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzbdbv3mxk2j",
+      "published_at": "2026-11-01T17:25:10.436289+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVvH8BDWAAEWtJh.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2115504420519846264",
+      "source_tweet_id": "2115504420519846264",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "A una gran escasez de hojas.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 47.6,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1876,7 +1904,8 @@
     "4b169100fd4e4e4bcee99027d88f8f32fcbc8d58213c18ba6401645af761a32f",
     "df7588b5216eec0f9a98099b4954e69c9bae73813204c716e00da46a1103a25a",
     "86dfe476515014467085386bb2fad3fb6f7ee8c4f2091b325731ed1c68437130",
-    "17a3c411bf5d85a5ccb0f110b22a12bee93e0bb586015c99309f14ba98aed7ec"
+    "17a3c411bf5d85a5ccb0f110b22a12bee93e0bb586015c99309f14ba98aed7ec",
+    "b298abf79236fe484d126a5c220273b918ab7063cc8c1f077e6a6767a944a9cb"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -1941,7 +1970,8 @@
     "eedba5c10c3fc384a90d9d4c8ef6c695f0274a9db682f597333c295b9dbc489d",
     "86aef8969a176faa8289bbf3ba2b848230337467b9738c7d0aa542622712cad4",
     "a673ff9ac7e1199d29618d06a801430d4ce629829361c20c4de19ac7ac5f38e5",
-    "f25a2ba798a3519ad695045252bd3ee2362e3d65d5488abd0f98a709a3150d90"
+    "f25a2ba798a3519ad695045252bd3ee2362e3d65d5488abd0f98a709a3150d90",
+    "3aff68a9480191f350140f15adf7006a9baf8b01469c96f693b3700041fc16c9"
   ],
   "last_metrics_refresh": "2026-11-01T11:44:03.926639+00:00"
 }
