@@ -1867,6 +1867,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "feaabf1bf1ea9966be5de2e70680e54f44977cc5f301fe13faf7390c9dc0b66a",
+      "image_hash": "aa4f2b59194df3a77d56f6bb2128a94670394650ee3b588b1a7907e353a60fdf",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzccfh5qum2l",
+      "cid": "bafyreiaijsqebfjpup6mmciadp7avxlbxem7knnjfyetyc3eicugycf3cm",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzccfh5qum2l",
+      "published_at": "2026-11-02T02:41:56.161017+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HVvH8BEXcAAPDaQ.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2115504420519846264",
+      "source_tweet_id": "2115504420519846264",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Así era más seguro; aunque, como él sabía muy bien, incluso una espalda podía ser reveladora.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 60.44,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1934,7 +1962,8 @@
     "86dfe476515014467085386bb2fad3fb6f7ee8c4f2091b325731ed1c68437130",
     "17a3c411bf5d85a5ccb0f110b22a12bee93e0bb586015c99309f14ba98aed7ec",
     "b298abf79236fe484d126a5c220273b918ab7063cc8c1f077e6a6767a944a9cb",
-    "3ecdf2a2b7123b66454a6dddd6d341c3995dbb78867bb63948fd7f0296a76d92"
+    "3ecdf2a2b7123b66454a6dddd6d341c3995dbb78867bb63948fd7f0296a76d92",
+    "feaabf1bf1ea9966be5de2e70680e54f44977cc5f301fe13faf7390c9dc0b66a"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2001,7 +2030,8 @@
     "a673ff9ac7e1199d29618d06a801430d4ce629829361c20c4de19ac7ac5f38e5",
     "f25a2ba798a3519ad695045252bd3ee2362e3d65d5488abd0f98a709a3150d90",
     "3aff68a9480191f350140f15adf7006a9baf8b01469c96f693b3700041fc16c9",
-    "5ba54b18d90cf33dc736049e28abc511d9afd9078985a1090a60fb12e1c4ccfb"
+    "5ba54b18d90cf33dc736049e28abc511d9afd9078985a1090a60fb12e1c4ccfb",
+    "aa4f2b59194df3a77d56f6bb2128a94670394650ee3b588b1a7907e353a60fdf"
   ],
   "last_metrics_refresh": "2026-11-01T11:44:03.926639+00:00"
 }
