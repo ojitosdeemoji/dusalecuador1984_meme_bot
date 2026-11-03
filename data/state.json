@@ -1926,6 +1926,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "b1d125eaa14a86443b4a74f272e7e17f174bafa536530da9a760f72bf76763cf",
+      "image_hash": "31861f1b95c4381962a456fe02aa6be97d67fd7dd9b2ef4c1bcdc690cb1ef00a",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzexquyt6a2a",
+      "cid": "bafyreihk4j4ltizrs7a4urnjfemtk66tyut7zsnk227x5mv6xbfrnhzamy",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzexquyt6a2a",
+      "published_at": "2026-11-03T04:09:28.265386+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWJDdd1W4AAarpJ.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2117328968323875046",
+      "source_tweet_id": "2117328968323875046",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Trató de exprimirse de la memoria algún recuerdo infantil que le dijera si Londres había sido siempre así.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 128.81,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -1995,7 +2023,8 @@
     "b298abf79236fe484d126a5c220273b918ab7063cc8c1f077e6a6767a944a9cb",
     "3ecdf2a2b7123b66454a6dddd6d341c3995dbb78867bb63948fd7f0296a76d92",
     "feaabf1bf1ea9966be5de2e70680e54f44977cc5f301fe13faf7390c9dc0b66a",
-    "183b2f8da6ed889d0b46eb4d247bb8e94a13151643370d2096ec8e0f449510a9"
+    "183b2f8da6ed889d0b46eb4d247bb8e94a13151643370d2096ec8e0f449510a9",
+    "b1d125eaa14a86443b4a74f272e7e17f174bafa536530da9a760f72bf76763cf"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2064,7 +2093,8 @@
     "3aff68a9480191f350140f15adf7006a9baf8b01469c96f693b3700041fc16c9",
     "5ba54b18d90cf33dc736049e28abc511d9afd9078985a1090a60fb12e1c4ccfb",
     "aa4f2b59194df3a77d56f6bb2128a94670394650ee3b588b1a7907e353a60fdf",
-    "8dc511b7f74046a8aa9fcf86ac4eb7759c834e25336b9ca7c827b99fd7ec0bd5"
+    "8dc511b7f74046a8aa9fcf86ac4eb7759c834e25336b9ca7c827b99fd7ec0bd5",
+    "31861f1b95c4381962a456fe02aa6be97d67fd7dd9b2ef4c1bcdc690cb1ef00a"
   ],
   "last_metrics_refresh": "2026-11-02T13:14:02.806724+00:00"
 }
