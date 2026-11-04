@@ -1984,6 +1984,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "347426b2db5a103adcbf7b9c55d9925dfa8fc833ed989da7ece1f7177f2f6197",
+      "image_hash": "06499d0576ded7ec6f6fa82af1fa439a60b7ef9c4ee7d646a06738919b6fef39",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzhf77tb7y2m",
+      "cid": "bafyreicrq4umsewknzdlcahqxvxvlxofccdey6obhlkenlj2fxgwqlsxke",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzhf77tb7y2m",
+      "published_at": "2026-11-04T03:15:27.299994+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWOCN0CXMAAzbOU.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2117679458002022563",
+      "source_tweet_id": "2117679458002022563",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Ahora está mucho mejor, camarada.",
+      "lines_count": 1,
+      "text_position": "bottom_only",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 60.14,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2055,7 +2083,8 @@
     "feaabf1bf1ea9966be5de2e70680e54f44977cc5f301fe13faf7390c9dc0b66a",
     "183b2f8da6ed889d0b46eb4d247bb8e94a13151643370d2096ec8e0f449510a9",
     "b1d125eaa14a86443b4a74f272e7e17f174bafa536530da9a760f72bf76763cf",
-    "f2a09fd8461ed8ea7106262da72aae78a39c6ff14314fe7b3a230fa4645e4bf3"
+    "f2a09fd8461ed8ea7106262da72aae78a39c6ff14314fe7b3a230fa4645e4bf3",
+    "347426b2db5a103adcbf7b9c55d9925dfa8fc833ed989da7ece1f7177f2f6197"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2126,7 +2155,8 @@
     "aa4f2b59194df3a77d56f6bb2128a94670394650ee3b588b1a7907e353a60fdf",
     "8dc511b7f74046a8aa9fcf86ac4eb7759c834e25336b9ca7c827b99fd7ec0bd5",
     "31861f1b95c4381962a456fe02aa6be97d67fd7dd9b2ef4c1bcdc690cb1ef00a",
-    "4e1f87a373a89becab35d95b9e62441dd0da52189750fe74c584578f1e1e4ba9"
+    "4e1f87a373a89becab35d95b9e62441dd0da52189750fe74c584578f1e1e4ba9",
+    "06499d0576ded7ec6f6fa82af1fa439a60b7ef9c4ee7d646a06738919b6fef39"
   ],
   "last_metrics_refresh": "2026-11-03T12:39:42.806718+00:00"
 }
