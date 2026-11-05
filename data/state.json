@@ -2072,6 +2072,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-05T12:58:10.277897+00:00"
+    },
+    {
+      "phrase_hash": "42f9c5c62565db80bdd53944c3292e7c2274acd28951f36606b5d522171c2037",
+      "image_hash": "7fcb4f06d1c88d4cc68442b772ccc3df0724836de9d24ade25465b073a427fe8",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzlkfpu47j2f",
+      "cid": "bafyreicg5dhly3f2qnurafgvtde4p4nhugb3bkxerjvi6pdgyvlvqtoppq",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzlkfpu47j2f",
+      "published_at": "2026-11-05T18:59:13.011277+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWWxh1gWoAEtW3A.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2118295029097898002",
+      "source_tweet_id": "2118295029097898002",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "En ellos estaban instalados los cuatro Ministerios entre los cuales se dividía todo el sistema gubernamental.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 117.55,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2146,7 +2174,8 @@
     "f2a09fd8461ed8ea7106262da72aae78a39c6ff14314fe7b3a230fa4645e4bf3",
     "347426b2db5a103adcbf7b9c55d9925dfa8fc833ed989da7ece1f7177f2f6197",
     "fa2b378361bbc6835768ea950685424bfd96d682f517be649d8095004161f85a",
-    "e96eca8811cdf04fb850e876584b74d635db6805f4573f80a1e8e638b5da134c"
+    "e96eca8811cdf04fb850e876584b74d635db6805f4573f80a1e8e638b5da134c",
+    "42f9c5c62565db80bdd53944c3292e7c2274acd28951f36606b5d522171c2037"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2220,7 +2249,8 @@
     "4e1f87a373a89becab35d95b9e62441dd0da52189750fe74c584578f1e1e4ba9",
     "06499d0576ded7ec6f6fa82af1fa439a60b7ef9c4ee7d646a06738919b6fef39",
     "09ce7c850873c849ad34a38b9073a768476b0d80afa7e970819a8f76fa98ba0b",
-    "7df0e4b228091d21ecfe426fd39d159f8ed23f24571fd9eca8ffc9ac35ec6586"
+    "7df0e4b228091d21ecfe426fd39d159f8ed23f24571fd9eca8ffc9ac35ec6586",
+    "7fcb4f06d1c88d4cc68442b772ccc3df0724836de9d24ade25465b073a427fe8"
   ],
   "last_metrics_refresh": "2026-11-05T12:58:10.277897+00:00"
 }
