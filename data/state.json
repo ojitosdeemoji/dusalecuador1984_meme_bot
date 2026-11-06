@@ -2100,6 +2100,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "67e749e50bfe50d564e0358adbd6aba2ffc2f0505db511e77d273d619f1cd865",
+      "image_hash": "0c2e930a1d006bc45ee73d28c3d55123cb69ff5d504f87b50e3600e192a893a5",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzmgw6tbbz2z",
+      "cid": "bafyreiblyduef3hvtto5djtz47oavxnjbt5vgccleuku64cn3pzsiurori",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzmgw6tbbz2z",
+      "published_at": "2026-11-06T03:29:30.246089+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWYkhqdXsAAg-Xt.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2118420850743423265",
+      "source_tweet_id": "2118420850743423265",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Le parecía que sus palabras eran ortodoxia pura.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 136.4,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2175,7 +2203,8 @@
     "347426b2db5a103adcbf7b9c55d9925dfa8fc833ed989da7ece1f7177f2f6197",
     "fa2b378361bbc6835768ea950685424bfd96d682f517be649d8095004161f85a",
     "e96eca8811cdf04fb850e876584b74d635db6805f4573f80a1e8e638b5da134c",
-    "42f9c5c62565db80bdd53944c3292e7c2274acd28951f36606b5d522171c2037"
+    "42f9c5c62565db80bdd53944c3292e7c2274acd28951f36606b5d522171c2037",
+    "67e749e50bfe50d564e0358adbd6aba2ffc2f0505db511e77d273d619f1cd865"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2250,7 +2279,8 @@
     "06499d0576ded7ec6f6fa82af1fa439a60b7ef9c4ee7d646a06738919b6fef39",
     "09ce7c850873c849ad34a38b9073a768476b0d80afa7e970819a8f76fa98ba0b",
     "7df0e4b228091d21ecfe426fd39d159f8ed23f24571fd9eca8ffc9ac35ec6586",
-    "7fcb4f06d1c88d4cc68442b772ccc3df0724836de9d24ade25465b073a427fe8"
+    "7fcb4f06d1c88d4cc68442b772ccc3df0724836de9d24ade25465b073a427fe8",
+    "0c2e930a1d006bc45ee73d28c3d55123cb69ff5d504f87b50e3600e192a893a5"
   ],
   "last_metrics_refresh": "2026-11-05T12:58:10.277897+00:00"
 }
