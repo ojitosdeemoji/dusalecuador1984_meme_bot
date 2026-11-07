@@ -2188,6 +2188,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-07T11:34:15.675801+00:00"
+    },
+    {
+      "phrase_hash": "5c13333163c297d449a2e47bc36198252c4eeffe0b28b8f063f55ba020305acd",
+      "image_hash": "61f07b9d0de61b9c0902f3678da495f3e6f6a593b604a430ed27483608daf84d",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzqetzjrin2s",
+      "cid": "bafyreibftnz3ugb5e3xnx3w22tymh3aec3qxjfbdzliteihjk3gjbqfsua",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzqetzjrin2s",
+      "published_at": "2026-11-07T17:03:08.988106+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWdNq-4WEAAi8uG.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2118747671104266663",
+      "source_tweet_id": "2118747671104266663",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "El Ministerio del Amor, encargado de mantener la ley y el orden.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 75.52,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2266,7 +2294,8 @@
     "42f9c5c62565db80bdd53944c3292e7c2274acd28951f36606b5d522171c2037",
     "67e749e50bfe50d564e0358adbd6aba2ffc2f0505db511e77d273d619f1cd865",
     "ee86a47e3fc99157727ad98c1769225dd5a534f1467809e4685c7d2cb10fddc5",
-    "1a5d268516cdb350d6e6f92ff602d0a7f1d77c6a3a49ac03bed2190279963831"
+    "1a5d268516cdb350d6e6f92ff602d0a7f1d77c6a3a49ac03bed2190279963831",
+    "5c13333163c297d449a2e47bc36198252c4eeffe0b28b8f063f55ba020305acd"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2344,7 +2373,8 @@
     "7fcb4f06d1c88d4cc68442b772ccc3df0724836de9d24ade25465b073a427fe8",
     "0c2e930a1d006bc45ee73d28c3d55123cb69ff5d504f87b50e3600e192a893a5",
     "89323c5a5c4b0fa245bdc7f4aed19e07106fab95b5b7b7ba9578ad0c2d974ce6",
-    "696781aac9d3c163d74f2fab7b58568effe6423ba81be35349ea0f0464a40810"
+    "696781aac9d3c163d74f2fab7b58568effe6423ba81be35349ea0f0464a40810",
+    "61f07b9d0de61b9c0902f3678da495f3e6f6a593b604a430ed27483608daf84d"
   ],
   "last_metrics_refresh": "2026-11-07T11:34:15.675801+00:00"
 }
