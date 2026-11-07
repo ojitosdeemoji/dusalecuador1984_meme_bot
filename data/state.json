@@ -2158,6 +2158,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "1a5d268516cdb350d6e6f92ff602d0a7f1d77c6a3a49ac03bed2190279963831",
+      "image_hash": "696781aac9d3c163d74f2fab7b58568effe6423ba81be35349ea0f0464a40810",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzow2w3bfi2u",
+      "cid": "bafyreicontvmfkjkkczew6ydubjfrx7enjhtyhef3yvknqrn5ntljiyzyu",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzow2w3bfi2u",
+      "published_at": "2026-11-07T03:05:54.342599+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWdNq-RXsAAajLC.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2118747671104266663",
+      "source_tweet_id": "2118747671104266663",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "El Ministerio de la Paz, para los asuntos de guerra.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 126.04,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2235,7 +2263,8 @@
     "e96eca8811cdf04fb850e876584b74d635db6805f4573f80a1e8e638b5da134c",
     "42f9c5c62565db80bdd53944c3292e7c2274acd28951f36606b5d522171c2037",
     "67e749e50bfe50d564e0358adbd6aba2ffc2f0505db511e77d273d619f1cd865",
-    "ee86a47e3fc99157727ad98c1769225dd5a534f1467809e4685c7d2cb10fddc5"
+    "ee86a47e3fc99157727ad98c1769225dd5a534f1467809e4685c7d2cb10fddc5",
+    "1a5d268516cdb350d6e6f92ff602d0a7f1d77c6a3a49ac03bed2190279963831"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2312,7 +2341,8 @@
     "7df0e4b228091d21ecfe426fd39d159f8ed23f24571fd9eca8ffc9ac35ec6586",
     "7fcb4f06d1c88d4cc68442b772ccc3df0724836de9d24ade25465b073a427fe8",
     "0c2e930a1d006bc45ee73d28c3d55123cb69ff5d504f87b50e3600e192a893a5",
-    "89323c5a5c4b0fa245bdc7f4aed19e07106fab95b5b7b7ba9578ad0c2d974ce6"
+    "89323c5a5c4b0fa245bdc7f4aed19e07106fab95b5b7b7ba9578ad0c2d974ce6",
+    "696781aac9d3c163d74f2fab7b58568effe6423ba81be35349ea0f0464a40810"
   ],
   "last_metrics_refresh": "2026-11-06T12:45:21.587331+00:00"
 }
