@@ -2244,6 +2244,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "495bd6c187d1f9c5626f199dda0b05ba7ab83f517dce287b042752174cb6b965",
+      "image_hash": "7579cae9b961c6e0a7f0f945d8c3f6d85be09b6b323ec05b6f93f448dc4810c2",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzrf67emaz2w",
+      "cid": "bafyreia53d4hxyshts2agon2j7a4p23v5aczcfdotgveonikugnm2faoum",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzrf67emaz2w",
+      "published_at": "2026-11-08T02:41:30.416723+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWYjlATXQAA1sb9.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2118420850743423265",
+      "source_tweet_id": "2118420850743423265",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Sus nombres, en neolengua: Miniver, Minipax, Minimor y Minindantia.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 112.09,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2324,7 +2352,8 @@
     "ee86a47e3fc99157727ad98c1769225dd5a534f1467809e4685c7d2cb10fddc5",
     "1a5d268516cdb350d6e6f92ff602d0a7f1d77c6a3a49ac03bed2190279963831",
     "5c13333163c297d449a2e47bc36198252c4eeffe0b28b8f063f55ba020305acd",
-    "3c8288939b9767b4b0ae21d01bafb6b0c975e97cfca7c46e7747ac0aaa86d45e"
+    "3c8288939b9767b4b0ae21d01bafb6b0c975e97cfca7c46e7747ac0aaa86d45e",
+    "495bd6c187d1f9c5626f199dda0b05ba7ab83f517dce287b042752174cb6b965"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2404,7 +2433,8 @@
     "89323c5a5c4b0fa245bdc7f4aed19e07106fab95b5b7b7ba9578ad0c2d974ce6",
     "696781aac9d3c163d74f2fab7b58568effe6423ba81be35349ea0f0464a40810",
     "61f07b9d0de61b9c0902f3678da495f3e6f6a593b604a430ed27483608daf84d",
-    "d2cf063c9bd0b951594aba5f6804d9af58dc36f8523a09f91d3bda8693b23e6f"
+    "d2cf063c9bd0b951594aba5f6804d9af58dc36f8523a09f91d3bda8693b23e6f",
+    "7579cae9b961c6e0a7f0f945d8c3f6d85be09b6b323ec05b6f93f448dc4810c2"
   ],
   "last_metrics_refresh": "2026-11-07T11:34:15.675801+00:00"
 }
