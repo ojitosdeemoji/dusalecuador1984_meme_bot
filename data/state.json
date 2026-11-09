@@ -2331,6 +2331,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "5befbffd1e1abdc80792c2d03cf603480492e258794b3bcdae8ad677f1757188",
+      "image_hash": "4d5df79a86938338a795607313fd75619a69e38dd9f31fc5d6fa373da1eb3796",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mztvscljtz22",
+      "cid": "bafyreieob3c4r3x5v3cpi4vyybosbpuhu7zy3pmjm2jd35zui2q5k7l3f4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mztvscljtz22",
+      "published_at": "2026-11-09T02:44:24.238362+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWYjYtCXYAAKDtt.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2118419659045196080",
+      "source_tweet_id": "2118419659045196080",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Desde luego, Winston no lo abrió en seguida.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 119.46,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2414,7 +2442,8 @@
     "3c8288939b9767b4b0ae21d01bafb6b0c975e97cfca7c46e7747ac0aaa86d45e",
     "495bd6c187d1f9c5626f199dda0b05ba7ab83f517dce287b042752174cb6b965",
     "5f9cbf9d9bde79b0a59385fee587f103832a768e063baede22342bfd5f583f07",
-    "59c007b614030456530f7d625094117188e736fd7903bce5badf91d048e865fc"
+    "59c007b614030456530f7d625094117188e736fd7903bce5badf91d048e865fc",
+    "5befbffd1e1abdc80792c2d03cf603480492e258794b3bcdae8ad677f1757188"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2497,7 +2526,8 @@
     "d2cf063c9bd0b951594aba5f6804d9af58dc36f8523a09f91d3bda8693b23e6f",
     "7579cae9b961c6e0a7f0f945d8c3f6d85be09b6b323ec05b6f93f448dc4810c2",
     "cbf4f33b1a8d74dd551b7a6ec2b6bc914e53668184ba4dfa91fbfccf5d2e351a",
-    "21ed140329a68e28ebc3bbfe2e30f4dcb6dc285a1ebfa879183de13936d18910"
+    "21ed140329a68e28ebc3bbfe2e30f4dcb6dc285a1ebfa879183de13936d18910",
+    "4d5df79a86938338a795607313fd75619a69e38dd9f31fc5d6fa373da1eb3796"
   ],
   "last_metrics_refresh": "2026-11-08T11:46:22.998759+00:00"
 }
