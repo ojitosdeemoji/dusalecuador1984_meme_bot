@@ -2420,6 +2420,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-10T13:18:52.270647+00:00"
+    },
+    {
+      "phrase_hash": "5e274007d2267440b512d8fa0a924076e0751822f4ce400c51aec841d7f2c295",
+      "image_hash": "61ddd98009b5455879a4a800ec543b26cc95b2d5d47aab8080ddf96edf0bd623",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzy3y2nlbt2a",
+      "cid": "bafyreiguc56vkdz66yapx63umzvy33myw33kfxszyawyxtn5kwznpmhja4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzy3y2nlbt2a",
+      "published_at": "2026-11-10T18:45:38.991822+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWxZ18nW4AAoIhz.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2120168321060364328",
+      "source_tweet_id": "2120168321060364328",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Nobueno sirve exactamente igual, mejor todavía, porque es la necesidad.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 76.64,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2506,7 +2534,8 @@
     "59c007b614030456530f7d625094117188e736fd7903bce5badf91d048e865fc",
     "5befbffd1e1abdc80792c2d03cf603480492e258794b3bcdae8ad677f1757188",
     "f2b1960cd3cbc3e7e25c7fb75c9fce7aabf8e6485286617e37584cea6fe808b7",
-    "b2abb590d764014c2d76e2f3158fb3fe169dc750afa0651e98ec981e4a78f6d8"
+    "b2abb590d764014c2d76e2f3158fb3fe169dc750afa0651e98ec981e4a78f6d8",
+    "5e274007d2267440b512d8fa0a924076e0751822f4ce400c51aec841d7f2c295"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2592,7 +2621,8 @@
     "21ed140329a68e28ebc3bbfe2e30f4dcb6dc285a1ebfa879183de13936d18910",
     "4d5df79a86938338a795607313fd75619a69e38dd9f31fc5d6fa373da1eb3796",
     "233b4874fd7ba41783f2721e023ecc6686d0074d06045e7f8aeb935da47afa85",
-    "7142b34b7f30df70fd74383c37e951c747796f93d30315fef081f0d869e31a51"
+    "7142b34b7f30df70fd74383c37e951c747796f93d30315fef081f0d869e31a51",
+    "61ddd98009b5455879a4a800ec543b26cc95b2d5d47aab8080ddf96edf0bd623"
   ],
   "last_metrics_refresh": "2026-11-10T13:18:52.270647+00:00"
 }
