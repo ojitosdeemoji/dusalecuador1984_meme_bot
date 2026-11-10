@@ -2390,6 +2390,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "b2abb590d764014c2d76e2f3158fb3fe169dc750afa0651e98ec981e4a78f6d8",
+      "image_hash": "7142b34b7f30df70fd74383c37e951c747796f93d30315fef081f0d869e31a51",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3mzwnisth352m",
+      "cid": "bafyreidlpamn7cmtdchdnv2amcby7zdkxuyxqse2mzqsnv7qflzmgopm5u",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3mzwnisth352m",
+      "published_at": "2026-11-10T04:53:54.971683+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HWsQAB-XMAAYwVY.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2119805648170787038",
+      "source_tweet_id": "2119805648170787038",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Sin embargo, Winston suponía que todo esto eran tonter ías.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 92.2,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2475,7 +2503,8 @@
     "5f9cbf9d9bde79b0a59385fee587f103832a768e063baede22342bfd5f583f07",
     "59c007b614030456530f7d625094117188e736fd7903bce5badf91d048e865fc",
     "5befbffd1e1abdc80792c2d03cf603480492e258794b3bcdae8ad677f1757188",
-    "f2b1960cd3cbc3e7e25c7fb75c9fce7aabf8e6485286617e37584cea6fe808b7"
+    "f2b1960cd3cbc3e7e25c7fb75c9fce7aabf8e6485286617e37584cea6fe808b7",
+    "b2abb590d764014c2d76e2f3158fb3fe169dc750afa0651e98ec981e4a78f6d8"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2560,7 +2589,8 @@
     "cbf4f33b1a8d74dd551b7a6ec2b6bc914e53668184ba4dfa91fbfccf5d2e351a",
     "21ed140329a68e28ebc3bbfe2e30f4dcb6dc285a1ebfa879183de13936d18910",
     "4d5df79a86938338a795607313fd75619a69e38dd9f31fc5d6fa373da1eb3796",
-    "233b4874fd7ba41783f2721e023ecc6686d0074d06045e7f8aeb935da47afa85"
+    "233b4874fd7ba41783f2721e023ecc6686d0074d06045e7f8aeb935da47afa85",
+    "7142b34b7f30df70fd74383c37e951c747796f93d30315fef081f0d869e31a51"
   ],
   "last_metrics_refresh": "2026-11-09T13:40:33.734078+00:00"
 }
