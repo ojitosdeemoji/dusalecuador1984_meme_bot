@@ -2478,6 +2478,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-11T12:29:49.890972+00:00"
+    },
+    {
+      "phrase_hash": "a8e6f2434b7f34fe6b55130161274b8a99c16e1c0b4d12e3f8f986e28e4f036c",
+      "image_hash": "2ec827d10aa85a3fd4b2516bb5e3e042c529df41fea3ec4f63968653b0710bb2",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n22mzlcjyj2g",
+      "cid": "bafyreickefykxek6r3p646hsuan4mnmcqk6hiucm3nozyragiavlzv7l6m",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n22mzlcjyj2g",
+      "published_at": "2026-11-11T18:56:02.993561+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HW2lYO4W8AAx3HF.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2120532843864498333",
+      "source_tweet_id": "2120532843864498333",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Winston nunca había estado dentro del Mi nimor, ni siquiera se había acercado a medio kilómetro de él.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 56.35,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2566,7 +2594,8 @@
     "f2b1960cd3cbc3e7e25c7fb75c9fce7aabf8e6485286617e37584cea6fe808b7",
     "b2abb590d764014c2d76e2f3158fb3fe169dc750afa0651e98ec981e4a78f6d8",
     "5e274007d2267440b512d8fa0a924076e0751822f4ce400c51aec841d7f2c295",
-    "192e967ac9b2e6fa9ba3a99f81fe87008aff9431dec4635754e7b1a3e93ce77b"
+    "192e967ac9b2e6fa9ba3a99f81fe87008aff9431dec4635754e7b1a3e93ce77b",
+    "a8e6f2434b7f34fe6b55130161274b8a99c16e1c0b4d12e3f8f986e28e4f036c"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2654,7 +2683,8 @@
     "233b4874fd7ba41783f2721e023ecc6686d0074d06045e7f8aeb935da47afa85",
     "7142b34b7f30df70fd74383c37e951c747796f93d30315fef081f0d869e31a51",
     "61ddd98009b5455879a4a800ec543b26cc95b2d5d47aab8080ddf96edf0bd623",
-    "6df96434f01132de8803e55aab7927beaf4b76189d4404887a4d482158427bfd"
+    "6df96434f01132de8803e55aab7927beaf4b76189d4404887a4d482158427bfd",
+    "2ec827d10aa85a3fd4b2516bb5e3e042c529df41fea3ec4f63968653b0710bb2"
   ],
   "last_metrics_refresh": "2026-11-11T12:29:49.890972+00:00"
 }
