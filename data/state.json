@@ -2536,6 +2536,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-12T13:35:21.712157+00:00"
+    },
+    {
+      "phrase_hash": "0701039c267214270860c5645ed464558541d0245b090f55e4bd80b7c5c105f8",
+      "image_hash": "a359c4ac4917dc999e6ed0bdfad73df44f1ffa1781260bacd8699b04735809f8",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n255vda7cr22",
+      "cid": "bafyreic3b4p3e33zqpqhk5i7qrspplgdymg4etxpwnnjxnyzrb7fa3x5vu",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n255vda7cr22",
+      "published_at": "2026-11-12T19:03:13.486690+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HW8gM3vW0AANGWB.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2120949362910179398",
+      "source_tweet_id": "2120949362910179398",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Ampleforth se sobresaltó de nuevo: —No había pensado en todo.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 78.38,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2626,7 +2654,8 @@
     "5e274007d2267440b512d8fa0a924076e0751822f4ce400c51aec841d7f2c295",
     "192e967ac9b2e6fa9ba3a99f81fe87008aff9431dec4635754e7b1a3e93ce77b",
     "a8e6f2434b7f34fe6b55130161274b8a99c16e1c0b4d12e3f8f986e28e4f036c",
-    "1bec8a49873bfe3e5f9f2366907772a828f0d4441854c69c7360acc2f79503c5"
+    "1bec8a49873bfe3e5f9f2366907772a828f0d4441854c69c7360acc2f79503c5",
+    "0701039c267214270860c5645ed464558541d0245b090f55e4bd80b7c5c105f8"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2716,7 +2745,8 @@
     "61ddd98009b5455879a4a800ec543b26cc95b2d5d47aab8080ddf96edf0bd623",
     "6df96434f01132de8803e55aab7927beaf4b76189d4404887a4d482158427bfd",
     "2ec827d10aa85a3fd4b2516bb5e3e042c529df41fea3ec4f63968653b0710bb2",
-    "09e3c31e2a47c8e71180d488217979c9272a8b722e1c67ddb310fee175f3cd93"
+    "09e3c31e2a47c8e71180d488217979c9272a8b722e1c67ddb310fee175f3cd93",
+    "a359c4ac4917dc999e6ed0bdfad73df44f1ffa1781260bacd8699b04735809f8"
   ],
   "last_metrics_refresh": "2026-11-12T13:35:21.712157+00:00"
 }
