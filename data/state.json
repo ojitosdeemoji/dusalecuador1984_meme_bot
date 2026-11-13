@@ -2564,6 +2564,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "1c3fe4e5cb70135398fd61b1ee05b815b0f63fee8bd2f6903411de01292e171f",
+      "image_hash": "74e4fc7130e3509fd0be4e51c4501f99c88c7820bc20f2dd58227e51535d147a",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n262ntpesa2j",
+      "cid": "bafyreigmjcvtzm3telf2nyyaqy5f4q6fbv32wz724jqt3nrrzctxcvb3we",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n262ntpesa2j",
+      "published_at": "2026-11-13T03:38:00.543641+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HW8gM3zXYAAnRiE.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2120949362910179398",
+      "source_tweet_id": "2120949362910179398",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Winston se volvió de pronto.",
+      "lines_count": 1,
+      "text_position": "bottom_only",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 132.02,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2655,7 +2683,8 @@
     "192e967ac9b2e6fa9ba3a99f81fe87008aff9431dec4635754e7b1a3e93ce77b",
     "a8e6f2434b7f34fe6b55130161274b8a99c16e1c0b4d12e3f8f986e28e4f036c",
     "1bec8a49873bfe3e5f9f2366907772a828f0d4441854c69c7360acc2f79503c5",
-    "0701039c267214270860c5645ed464558541d0245b090f55e4bd80b7c5c105f8"
+    "0701039c267214270860c5645ed464558541d0245b090f55e4bd80b7c5c105f8",
+    "1c3fe4e5cb70135398fd61b1ee05b815b0f63fee8bd2f6903411de01292e171f"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2746,7 +2775,8 @@
     "6df96434f01132de8803e55aab7927beaf4b76189d4404887a4d482158427bfd",
     "2ec827d10aa85a3fd4b2516bb5e3e042c529df41fea3ec4f63968653b0710bb2",
     "09e3c31e2a47c8e71180d488217979c9272a8b722e1c67ddb310fee175f3cd93",
-    "a359c4ac4917dc999e6ed0bdfad73df44f1ffa1781260bacd8699b04735809f8"
+    "a359c4ac4917dc999e6ed0bdfad73df44f1ffa1781260bacd8699b04735809f8",
+    "74e4fc7130e3509fd0be4e51c4501f99c88c7820bc20f2dd58227e51535d147a"
   ],
   "last_metrics_refresh": "2026-11-12T13:35:21.712157+00:00"
 }
