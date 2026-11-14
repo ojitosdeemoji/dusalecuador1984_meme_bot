@@ -2622,6 +2622,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "9bc2a05a72441357df29fa369f410a02044e0e832beb643ce3838e92cc36e1b5",
+      "image_hash": "2a16f5d45c886b1925d5ea4dc66b187f93662619ac8e638a552b81ffb85bde7a",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2akp45ckc2b",
+      "cid": "bafyreiabdttml6eg7sz57uuusnokx4zk2gfsygvu3duaoxbq33yx45up2y",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2akp45ckc2b",
+      "published_at": "2026-11-14T03:30:22.366137+00:00",
+      "source_type": "x_twitter",
+      "source_file": "https://pbs.twimg.com/media/HXB-zqsWsAEiR5D.jpg",
+      "source_author": "PresidenteKast",
+      "source_tweet_url": "https://x.com/PresidenteKast/status/2121334857150370286",
+      "source_tweet_id": "2121334857150370286",
+      "fallback_activated": false,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Había adqu irido su rostro instantáneamente la expresión de tranquilo optimismo que era prudente llevar al enfrentarse con la - 6 -telepantalla.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 62.57,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2715,7 +2743,8 @@
     "1bec8a49873bfe3e5f9f2366907772a828f0d4441854c69c7360acc2f79503c5",
     "0701039c267214270860c5645ed464558541d0245b090f55e4bd80b7c5c105f8",
     "1c3fe4e5cb70135398fd61b1ee05b815b0f63fee8bd2f6903411de01292e171f",
-    "3507519097dc7ae1dc8caf2fd58e0f107eb988c0910b9f9f65a15a699e2c4588"
+    "3507519097dc7ae1dc8caf2fd58e0f107eb988c0910b9f9f65a15a699e2c4588",
+    "9bc2a05a72441357df29fa369f410a02044e0e832beb643ce3838e92cc36e1b5"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
@@ -2808,7 +2837,8 @@
     "09e3c31e2a47c8e71180d488217979c9272a8b722e1c67ddb310fee175f3cd93",
     "a359c4ac4917dc999e6ed0bdfad73df44f1ffa1781260bacd8699b04735809f8",
     "74e4fc7130e3509fd0be4e51c4501f99c88c7820bc20f2dd58227e51535d147a",
-    "7abb3e4e0fcc82e12319b46172a3266e59f8de9446d14aca6144e6b6498bbd58"
+    "7abb3e4e0fcc82e12319b46172a3266e59f8de9446d14aca6144e6b6498bbd58",
+    "2a16f5d45c886b1925d5ea4dc66b187f93662619ac8e638a552b81ffb85bde7a"
   ],
   "last_metrics_refresh": "2026-11-13T12:54:25.109586+00:00"
 }
