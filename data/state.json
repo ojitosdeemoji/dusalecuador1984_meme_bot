@@ -2708,6 +2708,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "5e902813519810c3a6d2317472a7ebb6bbe2ca1e351e7e667720fd4f3599bdd5",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2czeqcxyn22",
+      "cid": "bafyreidmn6fzevmvw2okntgvuzxx5p5vkq2uj62yvxx5conwrroj4a4wha",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2czeqcxyn22",
+      "published_at": "2026-11-15T02:58:21.019028+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Tomó de un estante una botella de un líquido incoloro con una sencilla etiqueta que decía: Ginebra de la Victoria.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2804,7 +2832,8 @@
     "3507519097dc7ae1dc8caf2fd58e0f107eb988c0910b9f9f65a15a699e2c4588",
     "9bc2a05a72441357df29fa369f410a02044e0e832beb643ce3838e92cc36e1b5",
     "77acebf41becdf2b66915009fc25c1fa24b493244d788a11e82741b8b45bcaa6",
-    "0ba4471c9aca69edc40a2ff5a1c603603809c5c209a66cc7f3c49c1721b137b8"
+    "0ba4471c9aca69edc40a2ff5a1c603603809c5c209a66cc7f3c49c1721b137b8",
+    "5e902813519810c3a6d2317472a7ebb6bbe2ca1e351e7e667720fd4f3599bdd5"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
