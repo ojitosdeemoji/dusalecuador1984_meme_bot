@@ -2767,6 +2767,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "53bd84686f0a027f857b677176ed04ea3e7c2d2226738215a985edba465c1eb3",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2fjgev3pf27",
+      "cid": "bafyreich73x2xnk3psbbw24jtv7k6qkwrklluosjg3tsdwytymegc7s5fm",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2fjgev3pf27",
+      "published_at": "2026-11-16T02:50:54.428218+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Aquello olía a medicina, algo así como el espíritu de arroz chino.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2865,7 +2893,8 @@
     "77acebf41becdf2b66915009fc25c1fa24b493244d788a11e82741b8b45bcaa6",
     "0ba4471c9aca69edc40a2ff5a1c603603809c5c209a66cc7f3c49c1721b137b8",
     "5e902813519810c3a6d2317472a7ebb6bbe2ca1e351e7e667720fd4f3599bdd5",
-    "2f5afda2ec83c7ea1ef4afad9bf279c641b5d4452fb794e26ec8a9b2a9f2fe7f"
+    "2f5afda2ec83c7ea1ef4afad9bf279c641b5d4452fb794e26ec8a9b2a9f2fe7f",
+    "53bd84686f0a027f857b677176ed04ea3e7c2d2226738215a985edba465c1eb3"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
