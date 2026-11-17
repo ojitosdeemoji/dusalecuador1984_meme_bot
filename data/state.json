@@ -2855,6 +2855,34 @@
       "quotes": 0,
       "score": 1.0,
       "metrics_updated_at": "2026-11-17T14:10:54.490459+00:00"
+    },
+    {
+      "phrase_hash": "8bcc7e26c45cdeaf633a6fc748c9e82da29f9fc720bef28dfd29f68c880f15f3",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2jtd3n7wt2n",
+      "cid": "bafyreig5t5ljujfidfvulfwdfmjmar3flzjertvdhtgw5lag2efu7usqia",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2jtd3n7wt2n",
+      "published_at": "2026-11-17T19:58:40.551092+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 2: Preferencia Suave",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Con el próximo pitillo tuvo ya cuidado y el tabaco no se salió.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -2956,7 +2984,8 @@
     "2f5afda2ec83c7ea1ef4afad9bf279c641b5d4452fb794e26ec8a9b2a9f2fe7f",
     "53bd84686f0a027f857b677176ed04ea3e7c2d2226738215a985edba465c1eb3",
     "399892039aa6e43ad369eef5fe33178666392e1f8346747ff90a097deb39484b",
-    "ac8e68faeaa71cde734c8b814b6c52d05c18349432f3e0115e25c75bebe4299f"
+    "ac8e68faeaa71cde734c8b814b6c52d05c18349432f3e0115e25c75bebe4299f",
+    "8bcc7e26c45cdeaf633a6fc748c9e82da29f9fc720bef28dfd29f68c880f15f3"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
