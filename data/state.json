@@ -2913,6 +2913,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-18T13:42:29.171403+00:00"
+    },
+    {
+      "phrase_hash": "db99e991421d7e367a207a098c4a5b14645573d7ccf9d32c77866cf230859a50",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2mcjou2dj27",
+      "cid": "bafyreihgt23l3hdcehjz6dqapghctur2l2gamn2htziglses4lpjvjmpke",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2mcjou2dj27",
+      "published_at": "2026-11-18T19:36:07.512750+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Volvió al cuarto de estar y se sentó ante una mesita situada a la izquierda de la telepantalla.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3016,7 +3044,8 @@
     "399892039aa6e43ad369eef5fe33178666392e1f8346747ff90a097deb39484b",
     "ac8e68faeaa71cde734c8b814b6c52d05c18349432f3e0115e25c75bebe4299f",
     "8bcc7e26c45cdeaf633a6fc748c9e82da29f9fc720bef28dfd29f68c880f15f3",
-    "398226029820c33839353e26b9a1cbd4f69bfeba576c583c20f981414d806be2"
+    "398226029820c33839353e26b9a1cbd4f69bfeba576c583c20f981414d806be2",
+    "db99e991421d7e367a207a098c4a5b14645573d7ccf9d32c77866cf230859a50"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
