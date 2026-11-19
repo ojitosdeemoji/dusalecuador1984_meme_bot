@@ -2971,6 +2971,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-19T14:10:43.783259+00:00"
+    },
+    {
+      "phrase_hash": "5d47dd53394f4a62de1bc57610b86b115ad3e3367f44d8a1b22ba47045bc171f",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2oswpmjtr24",
+      "cid": "bafyreib2nfaxrg5hohnu3cdwt44qxcczcki25oix6yxqkxhhcz5civ5fce",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2oswpmjtr24",
+      "published_at": "2026-11-19T19:35:03.970685+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "A un lado de ella había una alcoba que apenas tenía fondo, en la que se había instalado ah ora Winston.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3076,7 +3104,8 @@
     "8bcc7e26c45cdeaf633a6fc748c9e82da29f9fc720bef28dfd29f68c880f15f3",
     "398226029820c33839353e26b9a1cbd4f69bfeba576c583c20f981414d806be2",
     "db99e991421d7e367a207a098c4a5b14645573d7ccf9d32c77866cf230859a50",
-    "fccff34354ec1697e750b7bdc3d8bdfbec6f0d7804cde1c4286c6f879bc49b08"
+    "fccff34354ec1697e750b7bdc3d8bdfbec6f0d7804cde1c4286c6f879bc49b08",
+    "5d47dd53394f4a62de1bc57610b86b115ad3e3367f44d8a1b22ba47045bc171f"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
