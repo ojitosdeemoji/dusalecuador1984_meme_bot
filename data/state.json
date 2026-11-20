@@ -3029,6 +3029,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-20T13:52:46.298003+00:00"
+    },
+    {
+      "phrase_hash": "6200a5f7f532bc4b474cda8ca9880d52392f1a5b5800209ba4202be3f0c02bc3",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2rclw237b2d",
+      "cid": "bafyreib5iwk6ianmxaczmg6gkhev2irgo3dbj4sr73w5byaaysqezzmx5a",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2rclw237b2d",
+      "published_at": "2026-11-20T19:20:40.860182+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Era evidente que la habréis imaginado a vuestra manera.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3136,7 +3164,8 @@
     "db99e991421d7e367a207a098c4a5b14645573d7ccf9d32c77866cf230859a50",
     "fccff34354ec1697e750b7bdc3d8bdfbec6f0d7804cde1c4286c6f879bc49b08",
     "5d47dd53394f4a62de1bc57610b86b115ad3e3367f44d8a1b22ba47045bc171f",
-    "e0b3a0615d01e70ed1903d48b952418dbda56f7d3b1e69a8d54704973c6d20a4"
+    "e0b3a0615d01e70ed1903d48b952418dbda56f7d3b1e69a8d54704973c6d20a4",
+    "6200a5f7f532bc4b474cda8ca9880d52392f1a5b5800209ba4202be3f0c02bc3"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
