@@ -2999,6 +2999,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "e0b3a0615d01e70ed1903d48b952418dbda56f7d3b1e69a8d54704973c6d20a4",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2ppltl7we2d",
+      "cid": "bafyreihxkbr6tbrulgrsnfben7bpzawcjch7anejngcm2o4ivdk3yufo6a",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2ppltl7we2d",
+      "published_at": "2026-11-20T04:07:57.328589+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Era un hueco que, al ser construido el edificio, habría sido calc ulado seguramente para alacena o biblioteca.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3105,7 +3133,8 @@
     "398226029820c33839353e26b9a1cbd4f69bfeba576c583c20f981414d806be2",
     "db99e991421d7e367a207a098c4a5b14645573d7ccf9d32c77866cf230859a50",
     "fccff34354ec1697e750b7bdc3d8bdfbec6f0d7804cde1c4286c6f879bc49b08",
-    "5d47dd53394f4a62de1bc57610b86b115ad3e3367f44d8a1b22ba47045bc171f"
+    "5d47dd53394f4a62de1bc57610b86b115ad3e3367f44d8a1b22ba47045bc171f",
+    "e0b3a0615d01e70ed1903d48b952418dbda56f7d3b1e69a8d54704973c6d20a4"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
