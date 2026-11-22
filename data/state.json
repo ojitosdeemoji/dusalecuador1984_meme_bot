@@ -3145,6 +3145,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-22T13:08:03.985122+00:00"
+    },
+    {
+      "phrase_hash": "f3da7fe30b599576c4e6be6fc42a9da21701585be21269a87dd20788a63c27ff",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n2wbmyowim24",
+      "cid": "bafyreiezkg3bpnm74m2pp44mpiq63ixoxmc73njrclt7muty4sdt2yj7v4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n2wbmyowim24",
+      "published_at": "2026-11-22T18:46:42.101704+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Era un libro excepcionalmente bello.",
+      "lines_count": 1,
+      "text_position": "bottom_only",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3256,7 +3284,8 @@
     "6200a5f7f532bc4b474cda8ca9880d52392f1a5b5800209ba4202be3f0c02bc3",
     "424c58621823b3ef7172f32ca23acf5ef34d9b02c7e260c4aabb084179580ab2",
     "2a8da90f672c4c43376aa533a8c21dcef423d6f4fe34e3dd027ca5778cf67a5b",
-    "b9106c06145e25204bbcd08be05af3ffa68b825c8e950d4a3b64c937a32e3598"
+    "b9106c06145e25204bbcd08be05af3ffa68b825c8e950d4a3b64c937a32e3598",
+    "f3da7fe30b599576c4e6be6fc42a9da21701585be21269a87dd20788a63c27ff"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
