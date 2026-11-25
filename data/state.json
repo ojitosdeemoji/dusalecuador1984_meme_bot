@@ -3319,6 +3319,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-25T15:21:07.069586+00:00"
+    },
+    {
+      "phrase_hash": "a47d01a05a7032e668de1456b3b87ceaff780c2f334d0aee6bc89a65f95eb06e",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n35zihawp22e",
+      "cid": "bafyreicaz5zzk37zj7ikdtwvahoyvivplsxg5lifdmff6k6ncui6encmqe",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n35zihawp22e",
+      "published_at": "2026-11-25T20:42:17.538648+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Aunque estuviera en blanco, era comprometido guardar aquel libro.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3436,7 +3464,8 @@
     "76e09185f583bb6c066358adacc1c558b56ee0c7111d733903f97a9f909afc54",
     "41d8a3dcbedae1f949b206d62b2c449bbec7382c7e43aecc7b4c8bcfb115de95",
     "fa4bdfc83bd2cb4e626ddc59979d33251235ac19e9a2ac85aa092fb1bf782fd9",
-    "6d9c93fd6b405a0b9aa34d75a5147645fe4a5b605f12a16efefd2fa1828f2022"
+    "6d9c93fd6b405a0b9aa34d75a5147645fe4a5b605f12a16efefd2fa1828f2022",
+    "a47d01a05a7032e668de1456b3b87ceaff780c2f334d0aee6bc89a65f95eb06e"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
