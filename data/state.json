@@ -3347,6 +3347,34 @@
       "replies": 0,
       "quotes": 0,
       "score": 0.0
+    },
+    {
+      "phrase_hash": "8ceb2fbe245aec7b3326af12ca90b6bfe248663791aab57323948c6e9a668681",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n36wh6g2sz24",
+      "cid": "bafyreig7k5xlzbjxgrzetygaz5veaejv6wnkn3dw75orsf4n53537hdn6m",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n36wh6g2sz24",
+      "published_at": "2026-11-26T05:20:33.141116+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Lo que ahora se disponía Winston a hacer era abrir su Diario.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3465,7 +3493,8 @@
     "41d8a3dcbedae1f949b206d62b2c449bbec7382c7e43aecc7b4c8bcfb115de95",
     "fa4bdfc83bd2cb4e626ddc59979d33251235ac19e9a2ac85aa092fb1bf782fd9",
     "6d9c93fd6b405a0b9aa34d75a5147645fe4a5b605f12a16efefd2fa1828f2022",
-    "a47d01a05a7032e668de1456b3b87ceaff780c2f334d0aee6bc89a65f95eb06e"
+    "a47d01a05a7032e668de1456b3b87ceaff780c2f334d0aee6bc89a65f95eb06e",
+    "8ceb2fbe245aec7b3326af12ca90b6bfe248663791aab57323948c6e9a668681"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
