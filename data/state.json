@@ -3377,6 +3377,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-26T14:47:24.346524+00:00"
+    },
+    {
+      "phrase_hash": "fafd1476579c32d40b87ce89aa15de6d9f9e42179a3c6fcdecad9ab962bc5859",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n3airtjjsa2j",
+      "cid": "bafyreigft4zlvvvkas2r256vitznx6pzebftasrqcxikaxaj26fy7le6du",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n3airtjjsa2j",
+      "published_at": "2026-11-26T20:21:17.945818+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploitation",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "verbatim_extract",
+      "is_markov": false,
+      "phrase_text": "Wi nston puso un plumín en el portaplumas y lo chupó primero para quitarle la grasa.",
+      "lines_count": 2,
+      "text_position": "top_and_bottom",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3496,7 +3524,8 @@
     "fa4bdfc83bd2cb4e626ddc59979d33251235ac19e9a2ac85aa092fb1bf782fd9",
     "6d9c93fd6b405a0b9aa34d75a5147645fe4a5b605f12a16efefd2fa1828f2022",
     "a47d01a05a7032e668de1456b3b87ceaff780c2f334d0aee6bc89a65f95eb06e",
-    "8ceb2fbe245aec7b3326af12ca90b6bfe248663791aab57323948c6e9a668681"
+    "8ceb2fbe245aec7b3326af12ca90b6bfe248663791aab57323948c6e9a668681",
+    "fafd1476579c32d40b87ce89aa15de6d9f9e42179a3c6fcdecad9ab962bc5859"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
