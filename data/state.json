@@ -3435,6 +3435,34 @@
       "quotes": 0,
       "score": 0.0,
       "metrics_updated_at": "2026-11-27T14:47:08.777381+00:00"
+    },
+    {
+      "phrase_hash": "2784aa0370ecb2d461fbd3a5aea313ad34beeaecba3a28cddf553f4522f2ae76",
+      "image_hash": "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
+      "uri": "at://did:plc:rt3iouw4aulgxopixuk32qbx/app.bsky.feed.post/3n3cydshtwm2x",
+      "cid": "bafyreihmdz6q6znqtoi3bzd3qg3nxvatyf5ytyaesmlrryr7unoxlzuqa4",
+      "post_url": "https://bsky.app/profile/dusalecuador.bsky.social/post/3n3cydshtwm2x",
+      "published_at": "2026-11-27T20:05:06.396006+00:00",
+      "source_type": "local_fallback",
+      "source_file": "a.jpg",
+      "source_author": "archivo_local",
+      "source_tweet_url": "",
+      "source_tweet_id": "",
+      "fallback_activated": true,
+      "decision_mode": "exploration",
+      "learning_phase": "Fase 3: Equilibrio Generativo",
+      "generation_method": "markov_chain",
+      "is_markov": true,
+      "phrase_text": "Ni siquiera ahora estaba seguro.",
+      "lines_count": 1,
+      "text_position": "bottom_only",
+      "aspect_ratio": 1.5,
+      "approx_luminosity": 106.86,
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "quotes": 0,
+      "score": 0.0
     }
   ],
   "used_phrase_hashes": [
@@ -3556,7 +3584,8 @@
     "a47d01a05a7032e668de1456b3b87ceaff780c2f334d0aee6bc89a65f95eb06e",
     "8ceb2fbe245aec7b3326af12ca90b6bfe248663791aab57323948c6e9a668681",
     "fafd1476579c32d40b87ce89aa15de6d9f9e42179a3c6fcdecad9ab962bc5859",
-    "8e43b05e222b6954c0a215668e2e340ee79922f392e9eb76349bfa6f60c9b204"
+    "8e43b05e222b6954c0a215668e2e340ee79922f392e9eb76349bfa6f60c9b204",
+    "2784aa0370ecb2d461fbd3a5aea313ad34beeaecba3a28cddf553f4522f2ae76"
   ],
   "used_image_hashes": [
     "82b980063ff401b74284b829110bd33f8479618657441bfcc6445d785a3401a3",
